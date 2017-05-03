@@ -1,0 +1,22 @@
+{
+  "name": "vanarts_francesco",
+  "version": "0.1.0",
+  "description": "This is term 1 assignment of project managment course at VANARTS",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tom",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^1.3.7",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-connect-php": "^1.0.0",
+    "gulp-sass": "^2.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tom-minty/vanarts_francesco.git"
+  }
+}
