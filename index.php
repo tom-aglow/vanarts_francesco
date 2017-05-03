@@ -1,18 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title></title>
+<?php
+session_start();
 
-    <meta charset="UTF-8">
-    <meta name="description" content="">
+use core\Controller;
 
-    <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-    <?
-        echo "<pre>";
-        print_r($_SERVER);
-        echo "</pre>";
-    ?>
-</body>
-</html>
+/* ------autoload classes------*/
+
+spl_autoload_register(function ($className) {
+    $className = strtolower($className);
+    $className = str_replace('\\', '/', $className);
+    if (file_exists($className . '.php')) {
+        include_once($className . '.php');
+    } else {
+        //TODO how exceptions will be handled?
+//        throw new Exception();
+    }
+});
+
+
+/* ------get params from url------*/
+
+$url_query = explode('/', $_GET['q']);
+if ($url_query[count($url_query) - 1] === '') {
+    unset($url_query[count($url_query) - 1]);
+}
+
+
+
+$methodName = $url_query[0] ?? 'index';
+$methodName = 'page_' . $methodName;
+
+//TODO check if method exist
+
+$controller = (new Controller())->$methodName();
+
+$controller->render();
