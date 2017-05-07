@@ -4,26 +4,31 @@ var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 
-
+var mode = "css";
 
 /**
  * Reload the page after SASS
  */
 gulp.task('browser-sync', ['sass'], function() {
-    connect.server({
-        port: 80,
-        open: false
-    }, function (){
-        browserSync({
-            proxy: "http://francesco.local/"
+    if (mode == "php") {
+        connect.server({
+            port: 80,
+            open: false
+        }, function (){
+            browserSync({
+                proxy: "http://francesco.local/"
+            });
         });
-    });
-    // browserSync.init({
-    //     server: {
-    //         // baseDir: './'
-    //         proxy: "http://francesco.local/"
-    //     }
-    // });
+    } else if (mode == "css") {
+        browserSync.init({
+            server: {
+                baseDir: './'
+                // proxy: "http://francesco.local/"
+            }
+        });
+    }
+
+
 });
 
 /**
@@ -46,11 +51,18 @@ gulp.task('sass', function () {
 gulp.task('watch', function() {
     gulp.watch('css/**', ['sass']);
     // gulp.watch('js/**', ['browser-sync']);
-    gulp.watch(['*.php']).on('change', function () {
+    gulp.watch(['js/**']).on('change', function () {
+        browserSync.reload();
+    });
+    gulp.watch(['index.html' ,'pages/**']).on('change', function () {
         browserSync.reload();
     });
 
-
+    if (mode == "php") {
+        gulp.watch(['*.php']).on('change', function () {
+            browserSync.reload();
+        });
+    }
 });
 
 /**

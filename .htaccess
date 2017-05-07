@@ -10,11 +10,11 @@ RewriteRule .* index.php?q=$0 [QSA]
 #QSA - query string add // enable additional get-parametrs
 
 
-<FilesMatch "\.(php)$" >
-Deny from all
-</FilesMatch>
-
-<FilesMatch "index.(php)$">
-Allow from all
-</FilesMatch>
+#<FilesMatch "\.(php)$" >
+#Deny from all
+#</FilesMatch>
+#
+#<FilesMatch "index.(php)$">
+#Allow from all
+#</FilesMatch>
 
