@@ -1,0 +1,33 @@
+nav 
+  text-align: center
+  font-size: 0
+
+.nav-bar 
+  list-style-type: none
+  text-transform: uppercase
+
+.nav-bar-hor
+  overflow: auto
+  display: inline-block
+  & > li
+    float: left
+
+.nav-bar__item
+  display: block
+  padding: 35px 20px
+  font-size: 1rem
+  font-weight: lighter
+  transition: text-decoration 2s
+  text-decoration: none
+
+  &:link, &:visited
+    color: $primary-color
+
+  &.active
+    text-decoration: underline
+
+  &:hover
+    text-decoration: underline
+
+
+
