@@ -6,33 +6,61 @@
     <meta charset="UTF-8">
     <meta name="description" content="">
 
+    <!--css styles-->
     <link rel="stylesheet" href="css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+    <!--font awesome-->
+    <script src="https://use.fontawesome.com/4567abeb9b.js"></script>
 </head>
 <body>
-<div class="page-container">
-    <header>
-        <object type="image/svg+xml" data="img/logo.svg" class="logo"></object>
+    <div class="page-container">
+        <header>
+            <object type="image/svg+xml" data="img/logo.svg" class="logo"></object>
 
-        <nav>
-            <ul class="nav-bar nav-bar-hor">
-                <li><a class="nav-bar__item active" href="/">Home</a></li>
-                <li><a class="nav-bar__item" href="/about">About us</a></li>
-                <li><a class="nav-bar__item" href="/menu">Menu</a></li>
-                <li><a class="nav-bar__item" href="/wine-list">Wine list</a></li>
-                <li><a class="nav-bar__item" href="/gallery">Gallery</a></li>
-                <li><a class="nav-bar__item" href="/contacts">Contacts</a></li>
-            </ul>
-        </nav>
+            <nav>
+                <ul class="nav-bar nav-bar-hor">
+                    <li><a class="nav-bar__item active" href="/">Home</a></li>
+                    <li><a class="nav-bar__item" href="/about">About us</a></li>
+                    <li><a class="nav-bar__item" href="/menu">Menu</a></li>
+                    <li><a class="nav-bar__item" href="/wine-list">Wine list</a></li>
+                    <li><a class="nav-bar__item" href="/gallery">Gallery</a></li>
+                    <li><a class="nav-bar__item" href="/contacts">Contacts</a></li>
+                </ul>
 
-        <a class="btn btn-primary btn-lg" href="/reservation">Reservation</a>
-    </header>
+                <a class="btn btn-primary btn-lg btn-book" href="/reservation">Reservation</a>
+            </nav>
 
-    <section class="content">
+        </header>
 
-    </section>
-</div>
+        <section class="content">
 
-<script src="js/main.js"></script>
+        </section>
+
+        <footer class="page-footer">
+            <div class="address">
+                <span class="text-strong">Francesco</span><br>
+                800 René-Lévesque Blvd<br>
+                Montreal
+            </div>
+            <div class="phone text-strong">(576) 341-4334</div>
+            <div class="social-media">
+                <span class="fa-stack fa-1x">
+                    <a class="fa fa-facebook fa-stack-2x" href="http://facebook.com"></a>
+                </span>
+                <span class="fa-stack fa-1x">
+                    <a class="fa fa-youtube-play fa-stack-2x" href="http://youtube.com"></a>
+                </span>
+                <span class="fa-stack fa-1x">
+                    <a class="fa fa-instagram fa-stack-2x" href="http://instagram.com"></a>
+                </span>
+            </div>
+        </footer>
+    </div>
+
+<!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -375,7 +375,11 @@ ul {
   width: 100%;
   height: 68%; }
 
-/***    TYPOGRAPHY    ***/
+a:link, a:visited {
+  color: #000000;
+  text-decoration: none; }
+
+/***    EXTERNAL FONTS    ***/
 @font-face {
   font-family: 'Futura New';
   src: url("../fonts/FTN45.otf"); }
@@ -383,6 +387,14 @@ ul {
 @font-face {
   font-family: 'Futura New';
   src: url("../fonts/FTN65.otf");
+  font-weight: bold; }
+
+/***    TYPOGRAPHY    ***/
+body {
+  font-family: "Futura New", sans-serif; }
+
+.text-strong {
+  text-transform: uppercase;
   font-weight: bold; }
 
 .logo {
@@ -413,8 +425,6 @@ nav {
   -webkit-transition: text-decoration 2s;
   transition: text-decoration 2s;
   text-decoration: none; }
-  .nav-bar__item:link, .nav-bar__item:visited {
-    color: #000000; }
   .nav-bar__item.active {
     text-decoration: underline; }
   .nav-bar__item:hover {
@@ -438,6 +448,8 @@ nav {
   .btn-primary:hover {
     background-color: #FFFFFF;
     color: #000000; }
+  .btn-primary:link, .btn-primary:visited {
+    color: #FFFFFF; }
 
 .btn-book {
   position: absolute;
@@ -449,4 +461,28 @@ nav {
   height: 22%; }
 
 .page-footer {
-  height: 10%; }
+  height: 10%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 8.125rem; }
+  .page-footer .address {
+    padding-right: 4.7rem; }
+  .page-footer .social-media {
+    -webkit-box-flex: 2;
+    -webkit-flex-grow: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
+    text-align: right; }
+    .page-footer .social-media span {
+      margin-left: 3rem; }

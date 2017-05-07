@@ -1,8 +1,8 @@
 @import "0-tools/_normalize.scss";
 
+@import "1-base/_vars.sass";
 @import "1-base/_base.sass";
 @import "1-base/_fonts.sass";
-@import "1-base/_vars.sass";
 
 @import "2-modules/logo.sass";
 @import "2-modules/navbar.sass";
