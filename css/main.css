@@ -365,14 +365,17 @@ ul {
 /***    LAYOUT    ***/
 .page-container {
   background-color: pink;
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: -webkit-calc(100vh / 3 * 4);
+  width: calc(100vh / 3 * 4);
+  height: 100vh; }
 
 .content {
   background-color: teal;
   width: 100%;
-  height: -webkit-calc(100% * 2 / 3);
-  height: calc(100% * 2 / 3); }
+  height: 68%; }
 
+/***    TYPOGRAPHY    ***/
 @font-face {
   font-family: 'Futura New';
   src: url("../fonts/FTN45.otf"); }
@@ -383,13 +386,14 @@ ul {
   font-weight: bold; }
 
 .logo {
-  width: 12%;
+  width: 13%;
   display: block;
   margin: 0 auto; }
 
 nav {
   text-align: center;
-  font-size: 0; }
+  font-size: 0;
+  position: relative; }
 
 .nav-bar {
   list-style-type: none;
@@ -403,8 +407,8 @@ nav {
 
 .nav-bar__item {
   display: block;
-  padding: 35px 20px;
-  font-size: 1rem;
+  padding: 2.2rem 1.25rem;
+  font-size: 1.5rem;
   font-weight: lighter;
   -webkit-transition: text-decoration 2s;
   transition: text-decoration 2s;
@@ -424,7 +428,8 @@ nav {
   transition: all 1s; }
 
 .btn-lg {
-  padding: 15px 40px; }
+  padding: 1rem 2.6rem;
+  font-size: 1.5rem; }
 
 .btn-primary {
   color: #FFFFFF;
@@ -433,3 +438,15 @@ nav {
   .btn-primary:hover {
     background-color: #FFFFFF;
     color: #000000; }
+
+.btn-book {
+  position: absolute;
+  right: 2.5rem;
+  top: -webkit-calc(50% - (2rem));
+  top: calc(50% - (2rem)); }
+
+.page-header {
+  height: 22%; }
+
+.page-footer {
+  height: 10%; }
