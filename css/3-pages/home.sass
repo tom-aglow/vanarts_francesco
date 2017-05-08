@@ -1,0 +1,34 @@
+.home
+  .col-1:hover .home-article-details
+    height: 100%
+
+  h1
+    background-color: $bg-shade
+    text-align: center
+    padding-top: 2.75rem
+    padding-bottom: 2.75rem
+
+  .home-article-details
+    background-color: $bg-shade
+    overflow: hidden
+    height: 0
+    text-align: center
+    transition: all 1s ease-in-out
+
+    & h2, & p
+      text-align: left
+
+    & p:last-of-type
+      margin-bottom: 3.125rem
+
+  .chef
+    background: black url("../img/chef.jpg")
+
+  .sign-dish
+    background: black url("../img/sign-dish.jpg")
+
+  .dining
+    background: black url("../img/priv-dining.jpg")
+
+  .chef, .sign-dish, .dining
+    background-size: cover

@@ -358,13 +358,16 @@ th {
 
 /* My normalized staff
    ========================================================================== */
-ul {
+ul, h1, h2, h3, p {
   padding: 0;
   margin: 0; }
 
 /***    LAYOUT    ***/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
 .page-container {
-  background-color: pink;
   margin: 0 auto;
   width: -webkit-calc(100vh / 3 * 4);
   width: calc(100vh / 3 * 4);
@@ -373,11 +376,37 @@ ul {
 .content {
   background-color: teal;
   width: 100%;
-  height: 68%; }
+  height: 68%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row; }
 
-a:link, a:visited {
-  color: #000000;
-  text-decoration: none; }
+.col-1 {
+  width: -webkit-calc(100% / 3);
+  width: calc(100% / 3);
+  height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .col-1 > * {
+    padding: 0 4.125rem; }
+
+/***    IMAGES    ***/
+img {
+  width: 100%; }
 
 /***    EXTERNAL FONTS    ***/
 @font-face {
@@ -392,6 +421,24 @@ a:link, a:visited {
 /***    TYPOGRAPHY    ***/
 body {
   font-family: "Futura New", sans-serif; }
+
+a:link, a:visited {
+  color: #000000;
+  text-decoration: none; }
+
+h1 {
+  font-size: 3rem;
+  font-weight: lighter; }
+
+h2 {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  margin-bottom: 1.6rem;
+  color: #4A4A4A; }
+
+p {
+  color: #5E5E5E;
+  margin-bottom: 1.6rem; }
 
 .text-strong {
   text-transform: uppercase;
@@ -434,31 +481,36 @@ nav {
   text-transform: uppercase;
   text-decoration: none;
   font-weight: lighter;
-  -webkit-transition: all 1s;
-  transition: all 1s; }
+  -webkit-transition: background-color 1s, color 1s;
+  transition: background-color 1s, color 1s; }
 
 .btn-lg {
   padding: 1rem 2.6rem;
   font-size: 1.5rem; }
+
+.btn-md {
+  padding: 0.5rem 1.5rem;
+  font-size: 1.125rem; }
 
 .btn-primary {
   color: #FFFFFF;
   background-color: #000000;
   border: 1px solid #000000; }
   .btn-primary:hover {
-    background-color: #FFFFFF;
+    background-color: transparent;
     color: #000000; }
+    .btn-primary:hover:link, .btn-primary:hover:visited {
+      color: #000000; }
   .btn-primary:link, .btn-primary:visited {
     color: #FFFFFF; }
 
-.btn-book {
-  position: absolute;
-  right: 2.5rem;
-  top: -webkit-calc(50% - (2rem));
-  top: calc(50% - (2rem)); }
-
 .page-header {
   height: 22%; }
+  .page-header .btn {
+    position: absolute;
+    right: 2.5rem;
+    top: -webkit-calc(50% - (2rem));
+    top: calc(50% - (2rem)); }
 
 .page-footer {
   height: 10%;
@@ -486,3 +538,36 @@ nav {
     text-align: right; }
     .page-footer .social-media span {
       margin-left: 3rem; }
+
+.home .col-1:hover .home-article-details {
+  height: 100%; }
+
+.home h1 {
+  background-color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  padding-top: 2.75rem;
+  padding-bottom: 2.75rem; }
+
+.home .home-article-details {
+  background-color: rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+  height: 0;
+  text-align: center;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out; }
+  .home .home-article-details h2, .home .home-article-details p {
+    text-align: left; }
+  .home .home-article-details p:last-of-type {
+    margin-bottom: 3.125rem; }
+
+.home .chef {
+  background: black url("../img/chef.jpg"); }
+
+.home .sign-dish {
+  background: black url("../img/sign-dish.jpg"); }
+
+.home .dining {
+  background: black url("../img/priv-dining.jpg"); }
+
+.home .chef, .home .sign-dish, .home .dining {
+  background-size: cover; }
