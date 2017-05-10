@@ -423,6 +423,10 @@ img {
   font-weight: bold; }
 
 /***    TYPOGRAPHY    ***/
+html {
+  font-size: -webkit-calc(100vh / 3 * 4 / 100);
+  font-size: calc(100vh / 3 * 4 / 100); }
+
 body {
   font-family: "Futura New", sans-serif; }
 
@@ -513,6 +517,29 @@ nav {
   .btn-primary:link, .btn-primary:visited {
     color: #FFFFFF; }
 
+.menu-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1rem; }
+
+.menu-dish-name, .menu-price {
+  text-transform: uppercase;
+  color: #5E5E5E; }
+
+.menu-dish-desc {
+  color: #9B9B9B; }
+
 .page-header {
   height: 22%; }
   .page-header .btn {
@@ -582,7 +609,8 @@ nav {
           background-size: cover; }
 
 .about {
-  background: black url("../img/photos/history-photo.jpg");
+  background-color: black;
+  background-image: url("../img/photos/history-photo.jpg");
   -webkit-background-size: cover;
           background-size: cover; }
   .about h2:not(:first-of-type) {
@@ -607,3 +635,9 @@ nav {
   .about .reviews .mg-logo {
     max-width: 60px;
     width: 3.75rem; }
+
+.wine-list {
+  background-color: black;
+  background-image: url("../img/photos/wine_cellar-2.jpg");
+  -webkit-background-size: cover;
+          background-size: cover; }
