@@ -26,11 +26,8 @@ if ($url_query[count($url_query) - 1] === '') {
 
 
 
-$methodName = $url_query[0] ?? 'index';
-$methodName = 'page_' . $methodName;
+$page = $url_query[0] ?? 'home';
 
-//TODO check if method exist
+//TODO check if template exist
 
-$controller = (new Controller())->$methodName();
-
-$controller->render();
+$controller = (new Controller())->render($page);

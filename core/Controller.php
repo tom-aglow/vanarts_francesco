@@ -4,14 +4,18 @@ namespace core;
 
 class Controller {
 
-    public function page_index () {
-        return $this;
-    }
 
-    public function render () {
+
+    public function render ($page) {
+
+        $pageContent = System::buildTemplate($page . '.php', [
+
+        ]);
+
         $html = System::buildTemplate('main.php', [
-            'page_title' => '',
-            'page_content' => ''
+            'pageTitle' => '',
+            'pageContent' => $pageContent,        //array
+            'pageContentClass' => $page          //string
         ]);
 
         echo $html;

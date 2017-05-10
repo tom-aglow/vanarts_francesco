@@ -8,15 +8,14 @@
 
     <!--css styles-->
     <link rel="stylesheet" href="css/main.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
     <!--font awesome-->
     <script src="https://use.fontawesome.com/4567abeb9b.js"></script>
 </head>
 <body>
-    <div class="page-container">
-        <header>
-            <object type="image/svg+xml" data="img/logo.svg" class="logo"></object>
+    <main class="page-container">
+        <header class="page-header">
+            <object type="image/svg+xml" data="img/elements/logo.svg" class="logo"></object>
 
             <nav>
                 <ul class="nav-bar nav-bar-hor">
@@ -28,13 +27,12 @@
                     <li><a class="nav-bar__item" href="/contacts">Contacts</a></li>
                 </ul>
 
-                <a class="btn btn-primary btn-lg btn-book" href="/reservation">Reservation</a>
+                <a class="btn btn-primary btn-lg" href="/reservation">Reservation</a>
             </nav>
-
         </header>
 
-        <section class="content">
-
+        <section class="content <?=$pageContentClass ?>">
+            <?=$pageContent ?>
         </section>
 
         <footer class="page-footer">
@@ -56,7 +54,7 @@
                 </span>
             </div>
         </footer>
-    </div>
+    </main>
 
 <!--jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
