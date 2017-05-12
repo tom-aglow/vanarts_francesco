@@ -374,6 +374,7 @@ ul, h1, h2, h3, p {
   height: 100vh; }
 
 .content {
+  position: relative;
   background-color: teal;
   width: 100%;
   height: 68%;
@@ -388,6 +389,7 @@ ul, h1, h2, h3, p {
           flex-direction: row; }
 
 .col-1 {
+  position: relative;
   width: -webkit-calc(100% / 3);
   width: calc(100% / 3);
   height: 100%;
@@ -434,13 +436,13 @@ a:link, a:visited {
   color: #000000;
   text-decoration: none; }
 
-h1 {
+h1, h2 {
   font-size: 3rem;
   font-weight: lighter;
   padding-top: 2.75rem;
   padding-bottom: 2.75rem; }
 
-h2 {
+h3 {
   text-transform: uppercase;
   font-size: 1.25rem;
   margin-bottom: 1.6rem;
@@ -455,11 +457,11 @@ p {
   text-transform: uppercase;
   font-weight: bold; }
 
-h1::-moz-selection, h2::-moz-selection, p::-moz-selection, div::-moz-selection, span::-moz-selection, a::-moz-selection {
+h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, p::-moz-selection, div::-moz-selection, span::-moz-selection, a::-moz-selection {
   background-color: #000000;
   color: #FFFFFF; }
 
-h1::selection, h2::selection, p::selection, div::selection, span::selection, a::selection {
+h1::selection, h2::selection, h3::selection, p::selection, div::selection, span::selection, a::selection {
   background-color: #000000;
   color: #FFFFFF; }
 
@@ -657,9 +659,9 @@ nav {
           background-size: cover; }
   .wine-list > article:last-child {
     text-align: center; }
-    .wine-list > article:last-child h2, .wine-list > article:last-child .menu-item {
+    .wine-list > article:last-child h3, .wine-list > article:last-child .menu-item {
       text-align: left; }
-    .wine-list > article:last-child h2 {
+    .wine-list > article:last-child h3 {
       margin-top: 9.1rem; }
     .wine-list > article:last-child .menu-item:last-of-type {
       margin-bottom: 3.125rem; }
@@ -676,3 +678,62 @@ nav {
     z-index: 2; }
   .contacts p {
     margin-bottom: 3.75rem; }
+
+.menu #salads-img {
+  background-color: black;
+  background-image: url("../img/photos/salads.jpg");
+  -webkit-background-size: cover;
+          background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.menu #main-courses-img {
+  background-color: black;
+  background-image: url("../img/photos/main-courses.jpg");
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: -webkit-calc(50% - (100% / 3 / 2));
+  left: calc(50% - (100% / 3 / 2)); }
+
+.menu #desserts-img {
+  background-color: black;
+  background-image: url("../img/photos/desserts.jpg");
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: right;
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+.menu #salads-copy, .menu #main-courses-copy, .menu #desserts-copy {
+  position: absolute;
+  top: 0;
+  opacity: 0; }
+
+.menu #salads-copy {
+  left: -webkit-calc(100% / 3 * 2);
+  left: calc(100% / 3 * 2); }
+
+.menu #main-courses-copy {
+  left: -webkit-calc(100% / 3);
+  left: calc(100% / 3); }
+
+.menu #desserts-copy {
+  left: 0; }
+
+.menu .hide {
+  display: none; }
+
+.menu h1 {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: -webkit-calc(50% - 5rem);
+  top: calc(50% - 5rem);
+  opacity: 1; }

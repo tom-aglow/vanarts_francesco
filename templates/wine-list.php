@@ -2,7 +2,7 @@
     <h1>Wine list</h1>
 
     <section>
-        <h2>VINO SPUMANTE</h2>
+        <h3>VINO SPUMANTE</h3>
 
         <?foreach ($menuList['vino spumante'] as $item) :?>
             <div class="menu-item">
@@ -17,7 +17,7 @@
     </section>
 
     <section>
-        <h2 class="menu-item__offset">Vino bianco</h2>
+        <h3 class="menu-item__offset">Vino bianco</h3>
 
         <?foreach ($menuList['vino bianco'] as $item) :?>
             <div class="menu-item">
@@ -35,7 +35,7 @@
 
 <article class="col-1 block">
     <section>
-        <h2>Vino rosso</h2>
+        <h3>Vino rosso</h3>
 
         <?foreach ($menuList['vino rosso'] as $item) :?>
             <div class="menu-item">

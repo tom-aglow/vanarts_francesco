@@ -2,7 +2,7 @@
     <h1>Our chef</h1>
 
     <div class="home-article-details">
-        <h2>Macro Lombardi</h2>
+        <h3>Macro Lombardi</h3>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum tincidunt orci, venenatis venenatis metus porttitor sed. Nulla facilisi. Morbi pharetra vitae ligula et porttitor.</p>
         <p>Pellentesque vehicula volutpat lectus, eget cursus nibh congue eu. Ut pellentesque urna vitae enim pharetra, non euismod elit facilisis. Aenean posuere neque id ante consequat, ac ullamcorper tellus dapibus. Etiam hendrerit justo vitae egestas consectetur.</p>
@@ -16,7 +16,7 @@
     <h1>Signature dish</h1>
 
     <div class="home-article-details">
-        <h2>TAGLIERINI AL NERO</h2>
+        <h3>TAGLIERINI AL NERO</h3>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum tincidunt orci, venenatis venenatis metus porttitor sed. Nulla facilisi. Morbi pharetra vitae ligula et porttitor.</p>
         <p>Pellentesque vehicula volutpat lectus, eget cursus nibh congue eu. Ut pellentesque urna vitae enim pharetra, non euismod elit facilisis.</p>
@@ -29,7 +29,7 @@
     <h1>Private dining</h1>
 
     <div class="home-article-details">
-        <h2>Start planning your event</h2>
+        <h3>Start planning your event</h3>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum tincidunt orci, venenatis venenatis metus porttitor sed. Aenean posuere neque id ante consequat, ac ullamcorper tellus dapibus.Morbi pharetra vitae ligula et porttitor.</p>
         <p>Suspendisse vitae nibh lacus. Praesent eu elit quis nibh ornare maximus ullamcorper vitae mi. Nunc placerat arcu sed nunc eleifend, at finibus nunc interdum.</p>
