@@ -663,3 +663,16 @@ nav {
       margin-top: 9.1rem; }
     .wine-list > article:last-child .menu-item:last-of-type {
       margin-bottom: 3.125rem; }
+
+.contacts {
+  position: relative; }
+  .contacts #google-map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .contacts article {
+    z-index: 2; }
+  .contacts p {
+    margin-bottom: 3.75rem; }
