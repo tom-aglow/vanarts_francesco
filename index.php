@@ -31,3 +31,9 @@ $page = $url_query[0] ?? 'home';
 //TODO check if template exist
 
 $controller = (new Controller())->render($page);
+//$controller = (new Controller())->getMenuList('menu');
+
+
+//echo "<pre>";
+//print_r($controller);
+//echo "</pre>";

@@ -16,7 +16,7 @@
       position: center
     position: absolute
     top: 0
-    left: calc(50% - (100% / 3 / 2))
+    left: calc(100% / 3)
 
   #desserts-img
     background:
@@ -26,11 +26,12 @@
       position: right
     position: absolute
     top: 0
-    right: 0
+    left: calc(100% / 3 * 2)
 
 
   #salads-copy, #main-courses-copy, #desserts-copy
     position: absolute
+    height: 100%
     top: 0
     opacity: 0
 
@@ -39,6 +40,13 @@
 
   #main-courses-copy
     left: calc(100% / 3)
+    width: 100%
+    display: flex
+    flex-direction: row
+
+    & .col-1:last-child
+      & .menu-item:first-child
+        margin-top: 9.1rem
 
   #desserts-copy
     left: 0

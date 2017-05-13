@@ -1,5 +1,6 @@
 var boxNamesList = ['salads', 'main-courses', 'desserts'];
 var boxImgStr = '';
+var animationTime = 1000;
 
 for (var i = 0; i < boxNamesList.length - 1; i++) {
     boxImgStr += "#" + boxNamesList[i] + "-img, ";
@@ -9,79 +10,71 @@ boxImgStr += "#" + boxNamesList[boxNamesList.length - 1] + "-img";
 var $boxTarget = $(boxImgStr);
 var boxClicked;
 
+function changeBoxOpacity (box, opacity) {
+    // box - opacity will be changed for all boxes in the list except 'box'
+    // opacity - value of opacity
+
+    for (var i = 0; i < boxNamesList.length; i++) {
+        if (boxNamesList[i] + '-img' !== box) {
+            $('#' + boxNamesList[i] + '-img').animate({
+                opacity: opacity
+            },animationTime);
+        }
+    }
+}
+
 $(document).ready(function () {
     $boxTarget.click(function () {
         var box = this.id;
         var copy = "#" + box.replace('-img', '-copy');
 
-        console.log(copy);
-        for (var i = 0; i < boxNamesList.length; i++) {
-            if (boxNamesList[i] + '-img' !== box) {
-                $('#' + boxNamesList[i] + '-img').addClass('hide');
-                // $('#' + boxNamesList[i] + '-img').animate({
-                //     width: "0"
-                // },500);
-            }
-        }
+        changeBoxOpacity(box, 0);
 
         $(this).css("z-index", "1");
         $('#' + box + ' > h1').animate({
             opacity: "0"
-        }, 500);
+        }, animationTime);
         $(copy).css("z-index", "2");
         $(this).animate(
             {
                 width: "100%",
-                left: "0"
+                left: 0
             },
-            500,
+            animationTime,
             function () {
-                $(copy).animate({opacity: 1}, 500);
+                $(copy).animate({opacity: 1}, animationTime);
             }
         );
 
+        boxClicked = this.id;
     });
 
 
-    // $(document).click(function (e) {
-    //     var $elem = $("#" + boxClicked);
-    //     var $text = $("#" + boxClicked + "-text");
-    //     console.log($text);
-    //     var posBox;
-    //
-    //     if (e.target != $elem[0] && !$elem.has(e.target).length &&
-    //         e.target != $text[0] && !$text.has(e.target).length) {
-    //         switch(boxClicked) {
-    //             case "blue":
-    //                 posBox = "0";
-    //                 break;
-    //             case "green":
-    //                 posBox = "33.33%";
-    //                 break;
-    //             case "red":
-    //                 posBox = "66.66%";
-    //                 break;
-    //         }
-    //
-    //         $elem.animate(
-    //             {
-    //                 width: "33.33%",
-    //                 left: posBox
-    //             },
-    //             500,
-    //             function () {
-    //                 $text.animate({opacity: 0}, 500, function () {
-    //                     $text.animate({
-    //                             width: "33.33%",
-    //                             left: 0
-    //                         }, 0
-    //                     );
-    //                     $elem.css("z-index", "0");
-    //                     $text.css("z-index", "0");
-    //                 });
-    //             }
-    //         );
-    //
-    //     }
-    // });
+    $(document).click(function (e) {
+        var $box = $("#" + boxClicked);
+        var $copy = $("#" + boxClicked.replace('-img', '-copy'));
+
+        if (e.target != $box[0] && !$box.has(e.target).length &&
+            e.target != $box[0] && !$box.has(e.target).length) {
+
+            var pos = boxNamesList.indexOf(boxClicked.replace('-img', '')) * 100 / 3;
+
+            $box.animate(
+                {
+                    width: 100 / 3 + "%",
+                    left: pos + "%"
+                },
+                animationTime
+            );
+            $copy.animate({opacity: 0}, animationTime, function () {
+                $box.css("z-index", "0");
+                $copy.css("z-index", "0");
+                changeBoxOpacity(boxClicked, 1);
+                $('#' + boxClicked + ' > h1').animate({
+                    opacity: "1"
+                }, animationTime);
+            });
+
+        }
+    });
 });
