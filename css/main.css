@@ -451,7 +451,7 @@ h3 {
 p {
   color: #5E5E5E;
   margin-bottom: 1.6rem;
-  font-size: 1.125rem; }
+  font-size: 1.25rem; }
 
 .text-strong {
   text-transform: uppercase;
@@ -541,7 +541,7 @@ nav {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-size: 1rem; }
+  font-size: 1.15rem; }
 
 .menu-item:not(:last-child) {
   margin-bottom: 1rem; }
@@ -550,11 +550,22 @@ nav {
   text-transform: uppercase;
   color: #5E5E5E; }
 
+.menu-dish {
+  -webkit-flex-basis: 85%;
+      -ms-flex-preferred-size: 85%;
+          flex-basis: 85%; }
+
 .menu-dish-desc {
   color: #9B9B9B; }
 
 .menu-item__offset {
   margin-top: 2.5rem; }
+
+.controls-close {
+  width: 3.5rem; }
+
+.col-1 > .controls-close {
+  padding: 0; }
 
 .page-header {
   height: 22%; }
@@ -582,6 +593,8 @@ nav {
   padding: 0 8.125rem; }
   .page-footer .address {
     padding-right: 4.7rem; }
+  .page-footer .address, .page-footer .phone {
+    font-size: 1.12rem; }
   .page-footer .social-media {
     -webkit-box-flex: 2;
     -webkit-flex-grow: 2;
@@ -606,7 +619,7 @@ nav {
   -webkit-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out; }
-  .home .home-article-details h2, .home .home-article-details p {
+  .home .home-article-details h3, .home .home-article-details p {
     text-align: left; }
   .home .home-article-details p:last-of-type {
     margin-bottom: 3.125rem; }
@@ -629,8 +642,8 @@ nav {
   background-image: url("../img/photos/history-photo.jpg");
   -webkit-background-size: cover;
           background-size: cover; }
-  .about h2:not(:first-of-type) {
-    margin-top: 2.75rem; }
+  .about h3:not(:first-of-type) {
+    margin-top: 1.25rem; }
   .about .michlen-stars {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -679,40 +692,40 @@ nav {
   .contacts p {
     margin-bottom: 3.75rem; }
 
-.menu #salads-img {
+.menu * {
+  -webkit-transition: opacity 1s, width 1s, left 1s;
+  -o-transition: opacity 1s, width 1s, left 1s;
+  transition: opacity 1s, width 1s, left 1s; }
+
+.menu .salads--img {
   background-color: black;
   background-image: url("../img/photos/salads.jpg");
   -webkit-background-size: cover;
           background-size: cover;
-  position: absolute;
-  top: 0;
   left: 0; }
 
-.menu #main-courses-img {
+.menu .main-courses--img {
   background-color: black;
   background-image: url("../img/photos/main-courses.jpg");
   -webkit-background-size: cover;
           background-size: cover;
   background-position: center;
-  position: absolute;
-  top: 0;
-  left: -webkit-calc(50% - (100% / 3 / 2));
-  left: calc(50% - (100% / 3 / 2)); }
+  left: -webkit-calc(100% / 3);
+  left: calc(100% / 3); }
 
-.menu #desserts-img {
+.menu .desserts--img {
   background-color: black;
   background-image: url("../img/photos/desserts.jpg");
   -webkit-background-size: cover;
           background-size: cover;
-  background-position: right;
-  position: absolute;
-  top: 0;
-  right: 0; }
+  background-position: right -1px top;
+  left: -webkit-calc(100% / 3 * 2);
+  left: calc(100% / 3 * 2); }
 
-.menu #salads-copy, .menu #main-courses-copy, .menu #desserts-copy {
+.menu #salads-copy, .menu #main-courses-copy, .menu #desserts-copy, .menu #salads-img, .menu #main-courses-img, .menu #desserts-img {
   position: absolute;
-  top: 0;
-  opacity: 0; }
+  height: 100%;
+  top: 0; }
 
 .menu #salads-copy {
   left: -webkit-calc(100% / 3 * 2);
@@ -720,13 +733,22 @@ nav {
 
 .menu #main-courses-copy {
   left: -webkit-calc(100% / 3);
-  left: calc(100% / 3); }
+  left: calc(100% / 3);
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+  .menu #main-courses-copy .col-1:last-child .menu-item:first-child {
+    margin-top: 9.1rem; }
 
 .menu #desserts-copy {
   left: 0; }
-
-.menu .hide {
-  display: none; }
 
 .menu h1 {
   text-align: center;
@@ -735,5 +757,22 @@ nav {
   width: 100%;
   left: 0;
   top: -webkit-calc(50% - 5rem);
-  top: calc(50% - 5rem);
-  opacity: 1; }
+  top: calc(50% - 5rem); }
+
+.menu .controls-close {
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+.hide {
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s; }
+
+.bring-to-front {
+  z-index: 1; }
+
+.menu .img-extend {
+  width: 100%;
+  left: 0; }

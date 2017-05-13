@@ -1,39 +1,40 @@
 .menu
-  #salads-img
+
+  & *
+    transition: opacity 1s, width 1s, left 1s
+
+  //styles for images
+
+  .salads--img
     background:
       color: black
       image: url("../img/photos/salads.jpg")
       size: cover
-    position: absolute
-    top: 0
     left: 0
 
-  #main-courses-img
+  .main-courses--img
     background:
       color: black
       image: url("../img/photos/main-courses.jpg")
       size: cover
       position: center
-    position: absolute
-    top: 0
     left: calc(100% / 3)
 
-  #desserts-img
+  .desserts--img
     background:
       color: black
       image: url("../img/photos/desserts.jpg")
       size: cover
-      position: right
-    position: absolute
-    top: 0
+      position: right -1px top
     left: calc(100% / 3 * 2)
 
 
-  #salads-copy, #main-courses-copy, #desserts-copy
+  //styles for text containers
+
+  #salads-copy, #main-courses-copy, #desserts-copy, #salads-img, #main-courses-img, #desserts-img
     position: absolute
     height: 100%
     top: 0
-    opacity: 0
 
   #salads-copy
     left: calc(100% / 3 * 2)
@@ -52,9 +53,7 @@
     left: 0
 
 
-  .hide
-    display: none
-
+  //styles for heading
 
   h1
     text-align: center
@@ -63,4 +62,11 @@
     width: 100%
     left: 0
     top: calc(50% - 5rem)
-    opacity: 1
+
+
+  //styles for control elements
+
+  .controls-close
+    position: absolute
+    top: 0
+    right: 0
