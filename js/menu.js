@@ -3,10 +3,10 @@
 // ---------------------
 
 
-// list of blocks that will be animated (array)
+// list of block's names that will be animated (array)
 var boxNamesList = ['salads', 'main-courses', 'desserts'];
 
-// a string variable to concatenate them all into jQuery selector
+// a string variable for concatenation all names into one jQuery selector
 var boxImgStr = '';
 
 for (var i = 0; i < boxNamesList.length - 1; i++) {
@@ -15,7 +15,7 @@ for (var i = 0; i < boxNamesList.length - 1; i++) {
 boxImgStr += "#" + boxNamesList[boxNamesList.length - 1] + "-img";
 
 
-// jQuery object that includes all image boxes
+// array that includes all image boxes
 var $boxTarget = $(boxImgStr);
 
 // variable for id of clicked box, box and copy jQuery-object
@@ -23,7 +23,7 @@ var boxClicked;
 var $box;
 var $copy;
 
-// jQuery object that includes all close controls elements
+// array that includes all close controls elements
 var $cross = $(".controls-close");
 
 

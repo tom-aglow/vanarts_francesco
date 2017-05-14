@@ -567,6 +567,15 @@ nav {
 .col-1 > .controls-close {
   padding: 0; }
 
+.controls-arrow-left, .controls-arrow-right {
+  width: 5rem;
+  z-index: 100; }
+
+.controls-arrow-right {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
 .page-header {
   height: 22%; }
   .page-header .btn {
@@ -762,6 +771,31 @@ nav {
 .menu .controls-close {
   position: absolute;
   top: 0;
+  right: 0; }
+
+.gallery .img-container {
+  position: relative; }
+
+.gallery .gallery-img {
+  height: 100%;
+  width: auto;
+  position: absolute;
+  top: 0;
+  -webkit-transition: all 3s;
+  -o-transition: all 3s;
+  transition: all 3s; }
+  .gallery .gallery-img:not(.active) {
+    -webkit-filter: grayscale(1);
+            filter: grayscale(1); }
+
+.gallery .controls-arrow-left, .gallery .controls-arrow-right {
+  position: absolute;
+  top: 45%; }
+
+.gallery .controls-arrow-left {
+  left: 0; }
+
+.gallery .controls-arrow-right {
   right: 0; }
 
 .hide {

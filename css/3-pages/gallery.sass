@@ -1,0 +1,23 @@
+.gallery
+  .img-container
+    position: relative
+
+  .gallery-img
+    height: 100%
+    width: auto
+    position: absolute
+    top: 0
+    transition: all 3s
+
+    &:not(.active)
+      filter: grayscale(1)
+
+  .controls-arrow-left, .controls-arrow-right
+    position: absolute
+    top: 45%
+
+  .controls-arrow-left
+    left: 0
+
+  .controls-arrow-right
+    right: 0
