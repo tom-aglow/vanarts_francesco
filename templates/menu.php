@@ -1,5 +1,3 @@
-
-
 <!--START:: copy for salads section-->
 <article id="salads-copy" class="col-1 block hide">
     <h2>Salads</h2>
@@ -106,7 +104,5 @@
 <div id="desserts-img" class="desserts--img col-1"><h1>Desserts</h1></div>
 
 
-<!--jQuery-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <!--my script-->
 <script src="../js/menu.js"></script>

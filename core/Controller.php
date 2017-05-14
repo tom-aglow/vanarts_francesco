@@ -7,10 +7,12 @@ class Controller {
 
 
     public function render ($page) {
-        $menuList = ($page == 'menu' || $page == 'wine-list') ? $this->getMenuList($page) : '';
+        $menuList = ($page == 'menu' || $page == 'wine-list') ? $this->reformatMenuList($this->getListFromFile('menu', $page))  : '';
+        $galleryList = ($page == 'gallery') ? $this->getListFromFile('gallery', $page)  : '';
 
         $pageContent = System::buildTemplate($page . '.php', [
-            'menuList' => $menuList
+            'menuList' => $menuList,
+            'galleryList' => $galleryList
         ]);
 
         $html = System::buildTemplate('main.php', [
@@ -22,18 +24,18 @@ class Controller {
         echo $html;
     }
 
-    public function getMenuList ($page) {
+    public function getListFromFile ($file, $page) {
         $row = 1;
-        $menu = [];
-        if (($handle = fopen("assets/menu.csv", "r")) !== FALSE) {
+        $list = [];
+        if (($handle = fopen("assets/$file.csv", "r")) !== FALSE) {
             while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
                 $num = count($data);
                 if ($row == 1 || $data[0] == $page) {
                     for ($c=0; $c < $num; $c++) {
                         if ($row < 2) {
-                            $menu[$row][] = $data[$c];
+                            $list[$row][] = $data[$c];
                         } else {
-                            $menu[$row][$menu[1][$c]] = $data[$c];
+                            $list[$row][$list[1][$c]] = $data[$c];
                         }
                     }
                 }
@@ -41,9 +43,9 @@ class Controller {
             }
             fclose($handle);
         }
-        array_splice($menu, 0, 1);
+        array_splice($list, 0, 1);
 
-        return $this->reformatMenuList($menu);
+        return $list;
     }
 
     private function reformatMenuList ($menu) {

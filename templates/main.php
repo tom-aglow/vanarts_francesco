@@ -11,6 +11,9 @@
 
     <!--font awesome-->
     <script src="https://use.fontawesome.com/4567abeb9b.js"></script>
+
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 </head>
 <body>
     <main class="page-container">
@@ -55,9 +58,6 @@
             </div>
         </footer>
     </main>
-
-<!--jQuery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
     <script src="js/main.js"></script>
 </body>
