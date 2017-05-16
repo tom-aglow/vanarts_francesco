@@ -8,6 +8,7 @@
 
     <!--css styles-->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
 
     <!--font awesome-->
     <script src="https://use.fontawesome.com/4567abeb9b.js"></script>

@@ -35,7 +35,7 @@ gulp.task('browser-sync', ['sass'], function() {
  * Compile .css file from main.scss
  */
 gulp.task('sass', function () {
-    return gulp.src('css/main.scss')
+    return gulp.src(['css/main.scss', 'css/5-jquery-ui/jquery-ui.scss'])
         .pipe(sass({
             includePaths: ['css'],
             onError: browserSync.notify

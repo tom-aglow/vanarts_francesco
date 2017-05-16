@@ -1,4 +1,5 @@
 @import "0-tools/_normalize.scss";
+@import "0-tools/my-normalize.sass";
 
 @import "1-base/_vars.sass";
 @import "1-base/_base.sass";
@@ -9,6 +10,7 @@
 @import "2-modules/buttons.sass";
 @import "2-modules/menu.sass";
 @import "2-modules/controls.sass";
+@import "2-modules/form.sass";
 
 @import "3-pages/_header.sass";
 @import "3-pages/_footer.sass";
@@ -18,6 +20,7 @@
 @import "3-pages/contacts.sass";
 @import "3-pages/menu.sass";
 @import "3-pages/gallery.sass";
+@import "3-pages/reservation.sass";
 
 @import "4-effects/mod-classes.sass";
 

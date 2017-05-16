@@ -1,0 +1,64 @@
+label
+  font-size: 1.15rem
+  padding: 0.2rem 0.8rem
+
+input, textarea, select, option
+  font-family: "Futura New", sans-serif
+  padding: 0.2rem 0.8rem
+  margin-bottom: 1rem
+  font-size: 1.35rem
+  outline: none
+  border: 1px solid black
+  border-radius: 0
+
+
+textarea
+  max-width: 100%
+  resize: none
+
+
+//custom radio button
+//------------------------
+
+input[type=radio]
+  -webkit-appearance: none
+
+:root input[type=radio]
+  /* original radio are push outside the viewport */
+  position: absolute
+  left: -1000rem
+
+:root input[type=radio] + label:before
+  content: ""
+  display: inline-block
+  width: 17px
+  height: 17px
+  margin-right: 1rem
+  background: url("../img/elements/input-radio.svg") no-repeat 0 0
+  vertical-align: bottom
+  position: relative
+  bottom: 1px
+
+:root input[type=radio]:checked + label:before
+  background-position: 0 -20px
+
+:root input[type=radio]:disabled + label:before
+  background-position: 0 -40px
+
+:root input[type=radio]:checked:disabled + label:before
+  background-position: 0 -60px
+
+:root input[type=radio]:focus + label:before
+  outline: 1px dotted black
+
+
+
+//custom date picker
+//------------------------
+input[type=date]
+  -webkit-appearance: none
+  &::-webkit-clear-button,
+  &::-webkit-inner-spin-button,
+  &::-webkit-calendar-picker-indicator
+    display: none
+

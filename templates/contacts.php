@@ -16,5 +16,5 @@
     <p>800 René-Lévesque Blvd<br>Montreal, Québec, H3G 1H6, Canada</p>
 
     <h3>Business hours</h3>
-    <p>Monday to Friday: 11 a.m - 10 p.m<br>Saturday and Sunday: 17 a.m - 11 p.m</p>
+    <p>Monday to Friday: 06 p.m - 10 p.m<br>Saturday and Sunday: 05 p.m - 11 p.m</p>
 </article>

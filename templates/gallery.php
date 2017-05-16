@@ -5,8 +5,8 @@
 </div>
 
 
-<img class="controls-arrow-left" src="../img/elements/btn-arrow-left.png" alt="icon arrow left">
-<img class="controls-arrow-right" src="../img/elements/btn-arrow-left.png" alt="icon arrow right">
+<img class="controls-arrow-left" src="img/elements/btn-arrow-left.png" alt="icon arrow left">
+<img class="controls-arrow-right" src="img/elements/btn-arrow-left.png" alt="icon arrow right">
 
 
 <!--my script-->
