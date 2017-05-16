@@ -1,21 +1,26 @@
+/*******************************/
+/***       PAGE: MENU       ***/
+/*******************************/
+
 .menu
 
   & *
     transition: opacity 1s, width 1s, left 1s
 
-  //styles for images
+
+  /***    STYLES FOR IMAGES    ***/
 
   .salads--img
     background:
       color: black
-      image: url("../img/photos/salads.jpg")
+      image: url("/img/photos/salads.jpg")
       size: cover
     left: 0
 
   .main-courses--img
     background:
       color: black
-      image: url("../img/photos/main-courses.jpg")
+      image: url("/img/photos/main-courses.jpg")
       size: cover
       position: center
     left: calc(100% / 3)
@@ -23,13 +28,13 @@
   .desserts--img
     background:
       color: black
-      image: url("../img/photos/desserts.jpg")
+      image: url("/img/photos/desserts.jpg")
       size: cover
       position: right -1px top
     left: calc(100% / 3 * 2)
 
 
-  //styles for text containers
+  /***    STYLES FOR TEXT CONTAINERS    ***/
 
   #salads-copy, #main-courses-copy, #desserts-copy, #salads-img, #main-courses-img, #desserts-img
     position: absolute
@@ -53,7 +58,7 @@
     left: 0
 
 
-  //styles for heading
+  /***    STYLES FOR HEADING    ***/
 
   h1
     text-align: center
@@ -63,8 +68,7 @@
     left: 0
     top: calc(50% - 5rem)
 
-
-  //styles for control elements
+  /***    STYLES FOR CONTROL ELEMENTS    ***/
 
   .controls-close
     position: absolute

@@ -30,16 +30,16 @@
 
     <h3>Michlen stars</h3>
     <div class="michlen-stars">
-        <object type="image/svg+xml" data="img/elements/michlen-star.svg"></object>
-        <object type="image/svg+xml" data="img/elements/michlen-star.svg"></object>
-        <object type="image/svg+xml" data="img/elements/michlen-star.svg"></object>
+        <object type="image/svg+xml" data="/img/elements/michlen-star.svg"></object>
+        <object type="image/svg+xml" data="/img/elements/michlen-star.svg"></object>
+        <object type="image/svg+xml" data="/img/elements/michlen-star.svg"></object>
     </div>
 
     <h3>Reviews</h3>
 
     <div class="reviews">
-        <a href="https://www.forbes.com/forbes-travel-guide/"><img class="forbes-logo" src="img/elements/forbes-logo.png" alt="Forbes Travel Guide Logo"></a>
-        <a href="http://montrealgazette.com/"><img class="mg-logo" src="img/elements/mg-logo.png" alt="Montreal Gazette Logo"></a>
-        <a href="http://lxry.ca/"><img class="lxry-logo" src="img/elements/lxry-logo.png" alt="LXRY Magazine Logo"></a>
+        <a href="https://www.forbes.com/forbes-travel-guide/"><img class="forbes-logo" src="/img/elements/forbes-logo.png" alt="Forbes Travel Guide Logo"></a>
+        <a href="http://montrealgazette.com/"><img class="mg-logo" src="/img/elements/mg-logo.png" alt="Montreal Gazette Logo"></a>
+        <a href="http://lxry.ca/"><img class="lxry-logo" src="/img/elements/lxry-logo.png" alt="LXRY Magazine Logo"></a>
     </div>
 </article>

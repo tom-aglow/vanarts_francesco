@@ -1,3 +1,6 @@
+/*******************************/
+/***  jQuery UI: BASE THEME  ***/
+/*******************************/
 /*! jQuery UI - v1.12.1 - 2017-05-15
 * http://jqueryui.com
 * Includes: draggable.css, core.css, resizable.css, selectable.css, sortable.css, accordion.css, autocomplete.css, menu.css, button.css, controlgroup.css, checkboxradio.css, datepicker.css, dialog.css, progressbar.css, selectmenu.css, slider.css, spinner.css, tabs.css, tooltip.css, theme.css
@@ -1637,6 +1640,9 @@ a.ui-button:active,
   -webkit-box-shadow: 0px 0px 5px #666666;
   box-shadow: 0px 0px 5px #666666; }
 
+/*******************************/
+/***       TYPOGRAPHY        ***/
+/*******************************/
 /***    EXTERNAL FONTS    ***/
 @font-face {
   font-family: 'Futura New';
@@ -1647,7 +1653,7 @@ a.ui-button:active,
   src: url("../fonts/FTN65.otf");
   font-weight: bold; }
 
-/***    TYPOGRAPHY    ***/
+/***    ELEMENTS STYLES    ***/
 html {
   font-size: -webkit-calc(100vh / 3 * 4 / 100);
   font-size: calc(100vh / 3 * 4 / 100); }
@@ -1688,6 +1694,9 @@ h1::selection, h2::selection, h3::selection, p::selection, div::selection, span:
   background-color: #000000;
   color: #FFFFFF; }
 
+/*******************************/
+/*** jQuery UI: CUSTOMISATION  ***/
+/*******************************/
 .ui-widget {
   font-family: "Futura New", sans-serif;
   outline: none; }
@@ -1698,18 +1707,20 @@ h1::selection, h2::selection, h3::selection, p::selection, div::selection, span:
   color: #FFFFFF;
   background-color: #000000; }
   .ui-widget-header .ui-icon {
-    background-image: url("../img/jquery-ui/ui-icons_cccccc_256x240.png"); }
+    background-image: url("/img/jquery-ui/ui-icons_cccccc_256x240.png"); }
 
 .ui-widget-content {
   background-color: #FFFFFF;
   color: #000000; }
   .ui-widget-content .ui-icon {
-    background-image: url("../img/jquery-ui/ui-icons_777777_256x240.png"); }
+    background-image: url("/img/jquery-ui/ui-icons_777777_256x240.png"); }
 
 .ui-button .ui-icon {
-  background-image: url("../img/elements/input-select.svg");
-  background-position: center -webkit-calc(50% + 1px);
-  background-position: center calc(50% + 1px); }
+  background-image: url("/img/elements/input-select.svg");
+  background-position: center -webkit-calc(50% + 2px);
+  background-position: center calc(50% + 2px);
+  -webkit-background-size: auto 1rem;
+          background-size: auto 1rem; }
 
 .ui-selectmenu-button.ui-button {
   padding: 0.2rem 0.8rem;

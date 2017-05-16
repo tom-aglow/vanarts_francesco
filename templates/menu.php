@@ -12,7 +12,7 @@
         </div>
     <?endforeach;?>
 
-    <img class="controls-close" src="img/elements/btn-close.png" alt="icon close">
+    <img class="controls-close" src="/img/elements/btn-close.png" alt="icon close">
 </article>
 <!--END:: copy for salads section-->
 
@@ -73,7 +73,7 @@
             </div>
         <?endforeach;?>
 
-        <img class="controls-close" src="img/elements/btn-close.png" alt="icon close">
+        <img class="controls-close" src="/img/elements/btn-close.png" alt="icon close">
     </div>
 <!--END:: second container-->
 
@@ -94,7 +94,7 @@
         </div>
     <?endforeach;?>
 
-    <img class="controls-close" src="img/elements/btn-close.png" alt="icon close">
+    <img class="controls-close" src="/img/elements/btn-close.png" alt="icon close">
 </article>
 <!--END:: copy for desserts section-->
 
@@ -102,7 +102,3 @@
 <div id="salads-img" class="salads--img col-1"><h1>Salads</h1></div>
 <div id="main-courses-img" class="main-courses--img col-1"><h1>Main courses</h1></div>
 <div id="desserts-img" class="desserts--img col-1"><h1>Desserts</h1></div>
-
-
-<!--my script-->
-<script src="../js/menu.js"></script>

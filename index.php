@@ -10,9 +10,6 @@ spl_autoload_register(function ($className) {
     $className = str_replace('\\', '/', $className);
     if (file_exists($className . '.php')) {
         include_once($className . '.php');
-    } else {
-        //TODO how exceptions will be handled?
-//        throw new Exception();
     }
 });
 
@@ -25,15 +22,15 @@ if ($url_query[count($url_query) - 1] === '') {
 }
 
 
-
 $page = $url_query[0] ?? 'home';
 
-//TODO check if template exist
+
+/* ------check if template exists------*/
+
+if (!file_exists("templates/" . $page . ".php")) {
+    $page = "error";
+}
+
+/* ------render the page------*/
 
 $controller = (new Controller())->render($page);
-//$controller = (new Controller())->getMenuList('menu');
-
-
-//echo "<pre>";
-//print_r($controller);
-//echo "</pre>";

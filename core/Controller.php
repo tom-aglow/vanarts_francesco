@@ -3,8 +3,11 @@
 namespace core;
 
 class Controller {
+    private $settings;
 
-
+    public function __construct () {
+        $this->settings = include_once __DIR__ . '/../settings.php';
+    }
 
     public function render ($page) {
         $menuList = ($page == 'menu' || $page == 'wine-list') ? $this->reformatMenuList($this->getListFromFile('menu', $page))  : '';
@@ -16,7 +19,10 @@ class Controller {
         ]);
 
         $html = System::buildTemplate('main.php', [
-            'pageTitle' => '',
+            'pageTitle' => $this->settings[$page]['title'],
+            'pageStyles' => $this->settings[$page]['styles'] ?? [],
+            'pageScript' => $this->settings[$page]['script'] ?? [],
+            'navActive' => [$page => 'active'],
             'pageContent' => $pageContent,        //array
             'pageContentClass' => $page          //string
         ]);
@@ -24,7 +30,7 @@ class Controller {
         echo $html;
     }
 
-    public function getListFromFile ($file, $page) {
+    private function getListFromFile ($file, $page) {
         $row = 1;
         $list = [];
         if (($handle = fopen("assets/$file.csv", "r")) !== FALSE) {

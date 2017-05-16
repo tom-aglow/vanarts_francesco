@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title></title>
+    <title><?=$pageTitle?></title>
 
     <meta charset="UTF-8">
-    <meta name="description" content="">
+    <meta name="description" content="This is a student exercise website for the Vancouver Institute of Media Arts">
 
     <!--css styles-->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <?if (count($pageStyles) > 0):?>
+        <? foreach ($pageStyles as $path): ?>
+            <link rel="stylesheet" href="<?=$path?>">
+        <?endforeach; ?>
+    <?endif;?>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
 
     <!--font awesome-->
     <script src="https://use.fontawesome.com/4567abeb9b.js"></script>
-
-    <!--jQuery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 </head>
 <body>
     <main class="page-container">
         <header class="page-header">
-            <object type="image/svg+xml" data="img/elements/logo.svg" class="logo"></object>
+            <object type="image/svg+xml" data="/img/elements/logo.svg" class="logo"></object>
 
             <nav>
                 <ul class="nav-bar nav-bar-hor">
-                    <li><a class="nav-bar__item active" href="/">Home</a></li>
-                    <li><a class="nav-bar__item" href="/about">About us</a></li>
-                    <li><a class="nav-bar__item" href="/menu">Menu</a></li>
-                    <li><a class="nav-bar__item" href="/wine-list">Wine list</a></li>
-                    <li><a class="nav-bar__item" href="/gallery">Gallery</a></li>
-                    <li><a class="nav-bar__item" href="/contacts">Contacts</a></li>
+                    <li><a class="nav-bar__item <?=$navActive['home'] ?? '' ?>" href="/">Home</a></li>
+                    <li><a class="nav-bar__item <?=$navActive['about'] ?? '' ?>" href="/about">About us</a></li>
+                    <li><a class="nav-bar__item <?=$navActive['menu'] ?? '' ?>" href="/menu">Menu</a></li>
+                    <li><a class="nav-bar__item <?=$navActive['wine-list'] ?? '' ?>" href="/wine-list">Wine list</a></li>
+                    <li><a class="nav-bar__item <?=$navActive['gallery'] ?? '' ?>" href="/gallery">Gallery</a></li>
+                    <li><a class="nav-bar__item <?=$navActive['contacts'] ?? '' ?>" href="/contacts">Contacts</a></li>
                 </ul>
 
                 <a class="btn btn-primary btn-lg" href="/reservation">Reservation</a>
@@ -60,6 +64,17 @@
         </footer>
     </main>
 
-    <script src="js/main.js"></script>
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+    <!--page scripts-->
+    <?if (count($pageScript) > 0):?>
+        <? foreach ($pageScript as $path): ?>
+            <script src="<?=$path?>"></script>
+        <?endforeach; ?>
+    <?endif;?>
+
+    <!--main script-->
+    <script src="/js/main.js"></script>
 </body>
 </html>

@@ -2,7 +2,7 @@
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCm0hJwCscX2NwRQ23nbUVDVkltEaa-HDE&callback=initMap">
     </script>
-    <script src="js/map.js"></script>
+    <script src="/js/map.js"></script>
 </div>
 <article class="col-1 block">
     <h1>Contacts</h1>

@@ -1,7 +1,7 @@
 <div class="col-1 block">
     <h1>Make a reservation</h1>
 
-    <form action="index.php" class="book-form" name="book-form" method="post">
+    <form action="/" class="book-form" name="book-form" method="post">
         <!--table type-->
         <div class="row">
             <input type="radio" id="main-hall" name="room" value="main" tabindex="1" checked><label for="main-hall">Main hall</label>
@@ -51,7 +51,3 @@
         <input type="submit" class="btn btn-md btn-primary" name="submit" value="Reserve now" tabindex="10">
     </form>
 </div>
-
-<!--my script-->
-<script src="js/jquery-ui-vader/jquery-ui.js"></script>
-<script src="js/reservation.js"></script>

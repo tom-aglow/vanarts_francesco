@@ -396,7 +396,10 @@ ul, h1, h2, h3, p {
   padding: 0;
   margin: 0; }
 
-/***    LAYOUT    ***/
+/*******************************/
+/***       BASE STYLES       ***/
+/*******************************/
+/***         LAYOUT        ***/
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -409,7 +412,6 @@ ul, h1, h2, h3, p {
 
 .content {
   position: relative;
-  background-color: teal;
   width: 100%;
   height: 68%;
   display: -webkit-box;
@@ -444,10 +446,13 @@ ul, h1, h2, h3, p {
 .block {
   background-color: rgba(255, 255, 255, 0.9); }
 
-/***    IMAGES    ***/
+/***         IMAGES        ***/
 img {
   width: 100%; }
 
+/*******************************/
+/***       TYPOGRAPHY        ***/
+/*******************************/
 /***    EXTERNAL FONTS    ***/
 @font-face {
   font-family: 'Futura New';
@@ -458,7 +463,7 @@ img {
   src: url("../fonts/FTN65.otf");
   font-weight: bold; }
 
-/***    TYPOGRAPHY    ***/
+/***    ELEMENTS STYLES    ***/
 html {
   font-size: -webkit-calc(100vh / 3 * 4 / 100);
   font-size: calc(100vh / 3 * 4 / 100); }
@@ -499,11 +504,17 @@ h1::selection, h2::selection, h3::selection, p::selection, div::selection, span:
   background-color: #000000;
   color: #FFFFFF; }
 
+/*******************************/
+/***          LOGO           ***/
+/*******************************/
 .logo {
   width: 13%;
   display: block;
   margin: 0 auto; }
 
+/*******************************/
+/***        NAV BAR          ***/
+/*******************************/
 nav {
   text-align: center;
   font-size: 0;
@@ -533,6 +544,9 @@ nav {
   .nav-bar__item:hover {
     text-decoration: underline; }
 
+/*******************************/
+/***         BUTTONS         ***/
+/*******************************/
 .btn {
   text-transform: uppercase;
   text-decoration: none;
@@ -561,6 +575,9 @@ nav {
   .btn-primary:link, .btn-primary:visited {
     color: #FFFFFF; }
 
+/*******************************/
+/***     MENU ELEMENTS       ***/
+/*******************************/
 .menu-item {
   display: -webkit-box;
   display: -webkit-flex;
@@ -595,6 +612,9 @@ nav {
 .menu-item__offset {
   margin-top: 2.5rem; }
 
+/*******************************/
+/***    CONTROL ELEMENTS     ***/
+/*******************************/
 .controls-close {
   width: 3.5rem; }
 
@@ -610,6 +630,9 @@ nav {
       -ms-transform: rotate(180deg);
           transform: rotate(180deg); }
 
+/*******************************/
+/***     FORM ELEMENTS       ***/
+/*******************************/
 label {
   font-size: 1.15rem;
   padding: 0.2rem 0.8rem; }
@@ -628,6 +651,7 @@ textarea {
   max-width: 100%;
   resize: none; }
 
+/***    RADIO BUTTONS    ***/
 input[type=radio] {
   -webkit-appearance: none; }
 
@@ -642,7 +666,7 @@ input[type=radio] {
   width: 17px;
   height: 17px;
   margin-right: 1rem;
-  background: url("../img/elements/input-radio.svg") no-repeat 0 0;
+  background: url("/img/elements/input-radio.svg") no-repeat 0 0;
   vertical-align: bottom;
   position: relative;
   bottom: 1px; }
@@ -659,11 +683,15 @@ input[type=radio] {
 :root input[type=radio]:focus + label:before {
   outline: 1px dotted black; }
 
+/***      DATE PICKER      ***/
 input[type=date] {
   -webkit-appearance: none; }
   input[type=date]::-webkit-clear-button, input[type=date]::-webkit-inner-spin-button, input[type=date]::-webkit-calendar-picker-indicator {
     display: none; }
 
+/*******************************/
+/***          HEADER        ***/
+/*******************************/
 .page-header {
   height: 22%; }
   .page-header .btn {
@@ -672,6 +700,9 @@ input[type=date] {
     top: -webkit-calc(50% - (2rem));
     top: calc(50% - (2rem)); }
 
+/*******************************/
+/***         FOOTER         ***/
+/*******************************/
 .page-footer {
   height: 10%;
   display: -webkit-box;
@@ -701,6 +732,9 @@ input[type=date] {
     .page-footer .social-media span {
       margin-left: 3rem; }
 
+/*******************************/
+/***       PAGE: HOME       ***/
+/*******************************/
 .home .col-1:hover .home-article-details {
   height: 100%; }
 
@@ -722,21 +756,24 @@ input[type=date] {
     margin-bottom: 3.125rem; }
 
 .home .chef {
-  background: black url("../img/photos/chef.jpg"); }
+  background: black url("/img/photos/chef.jpg"); }
 
 .home .sign-dish {
-  background: black url("../img/photos/sign-dish.jpg"); }
+  background: black url("/img/photos/sign-dish.jpg"); }
 
 .home .dining {
-  background: black url("../img/photos/priv-dining.jpg"); }
+  background: black url("/img/photos/priv-dining.jpg"); }
 
 .home .chef, .home .sign-dish, .home .dining {
   -webkit-background-size: cover;
           background-size: cover; }
 
+/*******************************/
+/***       PAGE: ABOUT       ***/
+/*******************************/
 .about {
   background-color: black;
-  background-image: url("../img/photos/history-photo.jpg");
+  background-image: url("/img/photos/history-photo.jpg");
   -webkit-background-size: cover;
           background-size: cover; }
   .about h3:not(:first-of-type) {
@@ -762,9 +799,12 @@ input[type=date] {
     max-width: 60px;
     width: 3.75rem; }
 
+/*******************************/
+/***     PAGE: WINE LIST     ***/
+/*******************************/
 .wine-list {
   background-color: black;
-  background-image: url("../img/photos/wine_cellar-2.jpg");
+  background-image: url("/img/photos/wine_cellar-2.jpg");
   -webkit-background-size: cover;
           background-size: cover; }
   .wine-list > article:last-child {
@@ -776,6 +816,9 @@ input[type=date] {
     .wine-list > article:last-child .menu-item:last-of-type {
       margin-bottom: 3.125rem; }
 
+/*******************************/
+/***     PAGE: CONTACTS      ***/
+/*******************************/
 .contacts {
   position: relative; }
   .contacts #google-map {
@@ -789,78 +832,80 @@ input[type=date] {
   .contacts p {
     margin-bottom: 3.75rem; }
 
-.menu * {
-  -webkit-transition: opacity 1s, width 1s, left 1s;
-  -o-transition: opacity 1s, width 1s, left 1s;
-  transition: opacity 1s, width 1s, left 1s; }
+/*******************************/
+/***       PAGE: MENU       ***/
+/*******************************/
+.menu {
+  /***    STYLES FOR IMAGES    ***/
+  /***    STYLES FOR TEXT CONTAINERS    ***/
+  /***    STYLES FOR HEADING    ***/
+  /***    STYLES FOR CONTROL ELEMENTS    ***/ }
+  .menu * {
+    -webkit-transition: opacity 1s, width 1s, left 1s;
+    -o-transition: opacity 1s, width 1s, left 1s;
+    transition: opacity 1s, width 1s, left 1s; }
+  .menu .salads--img {
+    background-color: black;
+    background-image: url("/img/photos/salads.jpg");
+    -webkit-background-size: cover;
+            background-size: cover;
+    left: 0; }
+  .menu .main-courses--img {
+    background-color: black;
+    background-image: url("/img/photos/main-courses.jpg");
+    -webkit-background-size: cover;
+            background-size: cover;
+    background-position: center;
+    left: -webkit-calc(100% / 3);
+    left: calc(100% / 3); }
+  .menu .desserts--img {
+    background-color: black;
+    background-image: url("/img/photos/desserts.jpg");
+    -webkit-background-size: cover;
+            background-size: cover;
+    background-position: right -1px top;
+    left: -webkit-calc(100% / 3 * 2);
+    left: calc(100% / 3 * 2); }
+  .menu #salads-copy, .menu #main-courses-copy, .menu #desserts-copy, .menu #salads-img, .menu #main-courses-img, .menu #desserts-img {
+    position: absolute;
+    height: 100%;
+    top: 0; }
+  .menu #salads-copy {
+    left: -webkit-calc(100% / 3 * 2);
+    left: calc(100% / 3 * 2); }
+  .menu #main-courses-copy {
+    left: -webkit-calc(100% / 3);
+    left: calc(100% / 3);
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+    .menu #main-courses-copy .col-1:last-child .menu-item:first-child {
+      margin-top: 9.1rem; }
+  .menu #desserts-copy {
+    left: 0; }
+  .menu h1 {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: -webkit-calc(50% - 5rem);
+    top: calc(50% - 5rem); }
+  .menu .controls-close {
+    position: absolute;
+    top: 0;
+    right: 0; }
 
-.menu .salads--img {
-  background-color: black;
-  background-image: url("../img/photos/salads.jpg");
-  -webkit-background-size: cover;
-          background-size: cover;
-  left: 0; }
-
-.menu .main-courses--img {
-  background-color: black;
-  background-image: url("../img/photos/main-courses.jpg");
-  -webkit-background-size: cover;
-          background-size: cover;
-  background-position: center;
-  left: -webkit-calc(100% / 3);
-  left: calc(100% / 3); }
-
-.menu .desserts--img {
-  background-color: black;
-  background-image: url("../img/photos/desserts.jpg");
-  -webkit-background-size: cover;
-          background-size: cover;
-  background-position: right -1px top;
-  left: -webkit-calc(100% / 3 * 2);
-  left: calc(100% / 3 * 2); }
-
-.menu #salads-copy, .menu #main-courses-copy, .menu #desserts-copy, .menu #salads-img, .menu #main-courses-img, .menu #desserts-img {
-  position: absolute;
-  height: 100%;
-  top: 0; }
-
-.menu #salads-copy {
-  left: -webkit-calc(100% / 3 * 2);
-  left: calc(100% / 3 * 2); }
-
-.menu #main-courses-copy {
-  left: -webkit-calc(100% / 3);
-  left: calc(100% / 3);
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row; }
-  .menu #main-courses-copy .col-1:last-child .menu-item:first-child {
-    margin-top: 9.1rem; }
-
-.menu #desserts-copy {
-  left: 0; }
-
-.menu h1 {
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.9);
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: -webkit-calc(50% - 5rem);
-  top: calc(50% - 5rem); }
-
-.menu .controls-close {
-  position: absolute;
-  top: 0;
-  right: 0; }
-
+/*******************************/
+/***     PAGE: GALLERY       ***/
+/*******************************/
 .gallery .img-container {
   position: relative;
   width: 100%;
@@ -895,9 +940,12 @@ input[type=date] {
 .gallery .controls-arrow-right {
   right: 0; }
 
+/*******************************/
+/***    PAGE: RESERVATION    ***/
+/*******************************/
 .reservation {
   background-color: black;
-  background-image: url("../img/photos/reservation.jpg");
+  background-image: url("/img/photos/reservation.jpg");
   -webkit-background-size: cover;
           background-size: cover; }
   .reservation .book-form {
@@ -909,7 +957,8 @@ input[type=date] {
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
-            flex-direction: column; }
+            flex-direction: column;
+    /***    INDIVIDUAL STYLES    ***/ }
     .reservation .book-form .row {
       display: -webkit-box;
       display: -webkit-flex;
@@ -943,6 +992,21 @@ input[type=date] {
     .reservation .book-form #time + .ui-selectmenu-button.ui-button {
       width: 37%; }
 
+/*******************************/
+/***         PAGE: 404       ***/
+/*******************************/
+.error {
+  background-color: black;
+  background-image: url("/img/photos/page404.jpg");
+  -webkit-background-size: cover;
+          background-size: cover; }
+  .error a {
+    text-decoration: underline;
+    font-size: 1.25rem; }
+
+/*******************************/
+/***    MODIFYING CLASSES    ***/
+/*******************************/
 .hide {
   opacity: 0;
   -webkit-transition: opacity 1s;
