@@ -1657,6 +1657,9 @@ a.ui-button:active,
 html {
   font-size: -webkit-calc(100vh / 3 * 4 / 100);
   font-size: calc(100vh / 3 * 4 / 100); }
+  @media screen and (max-width: 480px) {
+    html {
+      font-size: 80%; } }
 
 body {
   font-family: "Futura New", sans-serif; }

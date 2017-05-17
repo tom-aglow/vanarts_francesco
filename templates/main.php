@@ -5,6 +5,7 @@
 
     <meta charset="UTF-8">
     <meta name="description" content="This is a student exercise website for the Vancouver Institute of Media Arts">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--css styles-->
     <link rel="stylesheet" href="/css/main.css">
