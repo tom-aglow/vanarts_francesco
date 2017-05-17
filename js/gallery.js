@@ -17,14 +17,14 @@ $(document).ready(function () {
     $arrows.click(function () {
         $imgs.eq(index).toggleClass("active");
 
-        if (this.className == "controls-arrow-left") {
-            if (index == 0) {
+        if (this.className === "controls-arrow-left") {
+            if (index === 0) {
                 index = picNum - 1;
             } else {
                 index--;
             }
-        } else if(this.className == "controls-arrow-right") {
-            if (index == picNum - 1) {
+        } else if(this.className === "controls-arrow-right") {
+            if (index === picNum - 1) {
                 index = 0;
             } else {
                 index++;
@@ -51,7 +51,7 @@ $(document).ready(function () {
         var leftIndexes = [];
 
         // put central element to its place
-        placeElement($centralElement, ("- " + base));
+        placeElement($centralElement, (-base));
         $centralElement.css("z-index", (picNum - 1) / 2 + 1);
 
 
@@ -74,18 +74,18 @@ $(document).ready(function () {
         }
 
         // put inactive images in its places
-        for (var i = 0; i < rightIndexes.length; i++) {
+        for (var j = 0; j < rightIndexes.length; j++) {
             // calculate offset for each one
-            var rightOffset = base - $imgs.eq(rightIndexes[i]).width() + offset * (i + 1);
-            var leftOffset = base + offset * (rightIndexes.length - i);
+            var rightOffset = base - $imgs.eq(rightIndexes[j]).width() + offset * (j + 1);
+            var leftOffset = -(base + offset * (rightIndexes.length - j));
 
             // ... right images
-            placeElement($imgs.eq(rightIndexes[i]), ("+ " + rightOffset));
-            $imgs.eq(rightIndexes[i]).css("z-index", rightIndexes.length - i);
+            placeElement($imgs.eq(rightIndexes[j]), (rightOffset));
+            $imgs.eq(rightIndexes[j]).css("z-index", rightIndexes.length - j);
 
             // ... left images
-            placeElement($imgs.eq(leftIndexes[i]), ("- " + leftOffset));
-            $imgs.eq(leftIndexes[i]).css("z-index", leftIndexes.indexOf(leftIndexes[i]) + 1);
+            placeElement($imgs.eq(leftIndexes[j]), (leftOffset));
+            $imgs.eq(leftIndexes[j]).css("z-index", leftIndexes.indexOf(leftIndexes[j]) + 1);
 
         }
 
@@ -93,8 +93,11 @@ $(document).ready(function () {
 
     // function for put element in certain position from the center of container
     function placeElement ($element, offset) {
-        var str = "calc(50% " + offset + "px)";
-        $element.css("left", str);
+        var absOffset = $element.parent().width() / 2 + offset;
+        $element.animate({
+            left: absOffset
+        }, 100);
+        console.log(absOffset);
     }
 });
 
