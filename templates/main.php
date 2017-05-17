@@ -52,13 +52,13 @@
             <div class="phone text-strong">(576) 341-4334</div>
             <div class="social-media">
                 <span class="fa-stack fa-1x">
-                    <a class="fa fa-facebook fa-stack-2x" href="http://facebook.com"></a>
+                    <a class="fa fa-facebook fa-stack-2x" href="http://facebook.com" target="_blank"></a>
                 </span>
                 <span class="fa-stack fa-1x">
-                    <a class="fa fa-youtube-play fa-stack-2x" href="http://youtube.com"></a>
+                    <a class="fa fa-youtube-play fa-stack-2x" href="http://youtube.com" target="_blank"></a>
                 </span>
                 <span class="fa-stack fa-1x">
-                    <a class="fa fa-instagram fa-stack-2x" href="http://instagram.com"></a>
+                    <a class="fa fa-instagram fa-stack-2x" href="http://instagram.com" target="_blank"></a>
                 </span>
             </div>
         </footer>
