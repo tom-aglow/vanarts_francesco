@@ -23,6 +23,9 @@
   height: 68%
   display: flex
   flex-direction: row
+  @media only screen and (max-width: $bp-sm)
+    flex-direction: column
+    height: auto
 
 .col-1
   position: relative
@@ -34,6 +37,15 @@
   & > *
     padding-left: 4.125rem
     padding-right: 4.125rem
+
+    @media only screen and (max-width: $bp-sm)
+      padding-left: 2rem
+      padding-right: 2rem
+
+  @media only screen and (max-width: $bp-sm)
+    width: 100%
+    height: auto
+    min-height: 100vh
 
 .block
   background-color: $bg-shade

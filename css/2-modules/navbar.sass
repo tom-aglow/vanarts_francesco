@@ -10,6 +10,17 @@
   text-transform: uppercase
   @media only screen and (max-width: $bp-sm)
     height: 100vh
+    width: 100%
+    position: absolute
+    left: 0
+    background: $bg-shade
+    transform: translateY(-100%)
+    transition: all 0.5s ease-in-out
+
+    &.is-open
+      display: block
+      text-align: center
+      transform: translateY(0%)
 
 
   .nav-bar-hor
@@ -18,8 +29,10 @@
     flex-direction: row
     justify-content: center
 
+
     @media only screen and (max-width: $bp-sm)
       flex-direction: column
+      margin: 5rem 0 5rem 0
 
   .nav-bar__item
     display: block
@@ -35,49 +48,73 @@
     &:hover
       text-decoration: underline
 
+    @media only screen and (max-width: $bp-sm)
+      padding: 1.5rem 0
 
-  .mobile-nav-toggle
-    width: 40px
-    height: 40px
-    background: pink
-    margin: 0 auto
-    margin-top: 20px
-    display: none
-    align-items: center
-    cursor: pointer
+.mobile-nav-bg
+  background: $bg-shade
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  height: 3.5rem
+  z-index: 3
 
-    span,
+
+.mobile-nav-toggle
+  width: 2.5rem
+  height: 2.5rem
+  margin: 0.5rem auto 0 auto
+  display: none
+  align-items: center
+  cursor: pointer
+
+  span,
+  span:before,
+  span:after
+    content: ""
+    display: block
+    width: 100%
+    height: 1px
+    background: $primary-color
+    position: relative
+    transition: all 0.3s ease-in-out
+
+  span:before
+    top: 0.625rem
+
+  span:after
+    top: -0.625rem
+
+  &.is-open
+    span
+      background: transparent
+
     span:before,
     span:after
-      content: ""
-      display: block
-      width: 100%
-      height: 1px
-      background: $primary-color
-      position: relative
-      transition: all 0.3s ease-in-out
-
-    span:before
-      top: 10px
+      transform-origin: center
+      transform: rotate(45deg)
+      top: 0
 
     span:after
-      top: -10px
-
-    &:hover
-      span
-        background: transparent
-
-      span:before,
-      span:after
-        transform-origin: center
-        transform: rotate(45deg)
-        top: 0
-
-      span:after
-        transform: rotate(-45deg)
+      transform: rotate(-45deg)
 
 
-    @media only screen and (max-width: $bp-sm)
-      display: flex
+  @media only screen and (max-width: $bp-sm)
+    display: flex
 
+.arrow-down
+  display: none
+  width: 1.75rem
+  height: 1.75rem
+  position: absolute
+  left: calc(50% - 0.875rem)
+  bottom: 1.5rem
+  border-left: 1px solid $primary-color
+  border-bottom: 1px solid $primary-color
+  transform-origin: center
+  transform: rotate(-45deg)
+
+  @media only screen and (max-width: $bp-sm)
+    display: block
 

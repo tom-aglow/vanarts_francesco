@@ -1,6 +1,8 @@
 $(document).ready(function () {
-    // $("html").css({
-    //     "font-size": ($(window).height() / 3 * 4) / 100
-    // })
+    $(".mobile-nav-toggle").click(function () {
+        $(this).toggleClass("is-open");
+        $(this).parent().next().toggleClass("is-open");
+        $(".arrow-down").toggleClass("hide-fast");
+    });
 
 });

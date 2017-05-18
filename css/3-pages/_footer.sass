@@ -20,3 +20,23 @@
     text-align: right
     & span
       margin-left: 3rem
+
+  @media only screen and (max-width: $bp-sm)
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    height: 100vh
+    padding: 0
+
+    .address
+      padding: 0
+
+    .social-media
+      flex-grow: 0
+      span:first-child
+        margin: 0
+
+    .address, .phone, .social-media
+      margin: 2rem 0
+      text-align: center
+
