@@ -16,6 +16,7 @@
     background: $bg-shade
     transform: translateY(-100%)
     transition: all 0.5s ease-in-out
+    z-index: 1
 
     &.is-open
       display: block
@@ -114,6 +115,8 @@
   border-bottom: 1px solid $primary-color
   transform-origin: center
   transform: rotate(-45deg)
+  z-index: 1
+
 
   @media only screen and (max-width: $bp-sm)
     display: block

@@ -1659,7 +1659,7 @@ html {
   font-size: calc(100vh / 3 * 4 / 100); }
   @media screen and (max-width: 480px) {
     html {
-      font-size: 80%; } }
+      font-size: 100%; } }
 
 body {
   font-family: "Futura New", sans-serif; }

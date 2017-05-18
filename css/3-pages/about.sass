@@ -3,15 +3,24 @@
 /*******************************/
 .about
   background:
-    color: black
+    color: $accent-color
     image: url("/img/photos/history-photo.jpg")
     size: cover
+  @media only screen and (max-width: $bp-sm)
+    background-color: $accent-color
+    background-size: auto 100vh
+    background-repeat: no-repeat
+    background-attachment: fixed
+
+    .block:first-of-type
+      margin-top: 100vh
 
   h3:not(:first-of-type)
     margin-top: 1.25rem
 
   .michlen-stars
     flex-direction: row
+    margin-bottom: 1.6rem
 
     object
       width: 2rem
@@ -22,6 +31,12 @@
       opacity: 0.8
       filter: grayscale(1)
       margin-right: 1.8rem
+      @media only screen and (max-width: $bp-sm)
+        margin-right: 1.3rem
+
+
+    .lxry-logo
+      margin-right: 0
 
     .forbes-logo, .lxry-logo
       max-width: 100px
@@ -30,3 +45,4 @@
     .mg-logo
       max-width: 60px
       width: 3.75rem
+
