@@ -6,7 +6,6 @@ use core\Controller;
 /* ------autoload classes------*/
 
 spl_autoload_register(function ($className) {
-    $className = strtolower($className);
     $className = str_replace('\\', '/', $className);
     if (file_exists($className . '.php')) {
         include_once($className . '.php');

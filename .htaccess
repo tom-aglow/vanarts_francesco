@@ -1,6 +1,8 @@
 RewriteEngine On
 
 RewriteBase /
+#php_flag display_errors on
+#php_value error_reporting 6143
 
 #exceptions = all files .css, .js etc.
 RewriteCond %{REQUEST_FILENAME} !-f

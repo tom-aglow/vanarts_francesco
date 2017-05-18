@@ -26,8 +26,12 @@
         <header class="page-header">
             <object type="image/svg+xml" data="/img/elements/logo.svg" class="logo"></object>
 
-            <nav>
-                <ul class="nav-bar nav-bar-hor">
+            <nav class="nav-bar">
+                <div class="mobile-nav-toggle">
+                    <span></span>
+                </div>
+
+                <ul class="nav-bar-hor">
                     <li><a class="nav-bar__item <?=$navActive['home'] ?? '' ?>" href="/">Home</a></li>
                     <li><a class="nav-bar__item <?=$navActive['about'] ?? '' ?>" href="/about">About us</a></li>
                     <li><a class="nav-bar__item <?=$navActive['menu'] ?? '' ?>" href="/menu">Menu</a></li>
