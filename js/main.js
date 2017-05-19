@@ -5,4 +5,7 @@ $(document).ready(function () {
         $(".arrow-down").toggleClass("hide-fast");
     });
 
+    $(window).scroll(function () {
+        $(".arrow-down").fadeOut(1000);
+    });
 });

@@ -4,6 +4,9 @@
 
 .contacts
   position: relative
+  @media only screen and (max-width: $bp-sm)
+    padding-top: 3.5rem
+
 
   #google-map
     position: absolute
@@ -11,9 +14,14 @@
     left: 0
     width: 100%
     height: 100%
+    @media only screen and (max-width: $bp-sm)
+      width: 100vw
+      height: 100vh
+
+
 
   article
-    z-index: 2
+    z-index: 1
 
   p
     margin-bottom: 3.75rem

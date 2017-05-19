@@ -1,4 +1,4 @@
-<div class="col-1">
+<div class="col-1 col-holder">
 
 </div>
 

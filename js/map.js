@@ -1,6 +1,14 @@
 function initMap() {
     var location = {lat: 49.2819226, lng: -123.1141043};
-    var location_display = {lat: 49.2819226, lng: -123.1221043};
+    var location_display;
+
+    // define displayed position for desktop and mobile
+    if($(window).width() < 480) {
+        location_display = location;
+    } else {
+        location_display = {lat: 49.2819226, lng: -123.1221043};
+    }
+
     var map = new google.maps.Map(document.getElementById('google-map'), {
         zoom: 15,
         center: location_display,

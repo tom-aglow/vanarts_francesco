@@ -20,16 +20,19 @@
 
     <!--font awesome-->
     <script src="https://use.fontawesome.com/4567abeb9b.js"></script>
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 </head>
 <body>
     <main class="page-container">
         <header class="page-header">
             <object type="image/svg+xml" data="/img/elements/logo.svg" class="logo"></object>
-
-            <nav class="nav-bar">
+            <div class="mobile-nav-bg">
                 <div class="mobile-nav-toggle">
                     <span></span>
                 </div>
+            </div>
+            <nav class="nav-bar">
 
                 <ul class="nav-bar-hor">
                     <li><a class="nav-bar__item <?=$navActive['home'] ?? '' ?>" href="/">Home</a></li>
@@ -43,7 +46,12 @@
                 <a class="btn btn-primary btn-lg" href="/reservation">Reservation</a>
             </nav>
         </header>
-
+        <? if ($pageContentClass === 'home'):?>
+        <div class="logo-mobile">
+            <object type="image/svg+xml" data="../img/elements/logo.svg" class="logo-mobile-img"></object>
+            <div class="arrow-down"></div>
+        </div>
+        <? endif;?>
         <section class="content <?=$pageContentClass ?>">
             <?=$pageContent ?>
         </section>
@@ -68,9 +76,6 @@
             </div>
         </footer>
     </main>
-
-    <!--jQuery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
     <!--page scripts-->
     <?if (count($pageScript) > 0):?>
