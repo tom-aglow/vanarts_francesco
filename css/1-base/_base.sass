@@ -31,12 +31,18 @@
   position: relative
   width: calc(100% / 3)
   height: 100%
-  overflow: hidden
+  overflow: scroll
   display: flex
   flex-direction: column
-  & > *
+
+  & section
     padding-left: 4.125rem
     padding-right: 4.125rem
+    &:last-of-type
+      margin-bottom: 5rem
+    @media screen and (max-height: $bp-font-min)
+      padding-left: 1.5rem
+      padding-right: 1.5rem
 
     @media only screen and (max-width: $bp-sm)
       padding-left: 1.5rem

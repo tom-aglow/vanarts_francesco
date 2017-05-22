@@ -31,9 +31,6 @@
 
     </section>
 
-</article>
-
-<article class="col-1 block">
     <section>
         <h3>Vino rosso</h3>
 
@@ -49,5 +46,4 @@
 
         <a class="btn btn-primary btn-md" href="#">See full wine list</a>
     </section>
-
 </article>

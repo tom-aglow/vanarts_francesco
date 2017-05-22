@@ -8,4 +8,6 @@ $(document).ready(function () {
     $(window).scroll(function () {
         $(".arrow-down").fadeOut(1000);
     });
+
+    $('.scroll-pane').jScrollPane();
 });

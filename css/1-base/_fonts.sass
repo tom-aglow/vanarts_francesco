@@ -18,6 +18,8 @@
 
 html
   font-size: calc(100vh / 3 * 4 / 100)
+  @media screen and (max-height: $bp-font-min)
+    font-size: 75%
   @media screen and (max-width: $bp-sm)
     font-size: 100%
 
@@ -34,12 +36,16 @@ h1, h2
   font-weight: lighter
   padding-top: 2.5rem
   padding-bottom: 2.5rem
+  @media screen and (max-height: $bp-font-min)
+    font-size: 2.2rem
 
 h3
   text-transform: uppercase
   font-size: 1.25rem
   margin-bottom: 1.6rem
   color: $text-color-dark
+  @media screen and (max-height: $bp-font-min)
+    font-size: 1.15rem
 
 p
   color: $text-color-normal

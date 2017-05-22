@@ -3,10 +3,13 @@
 /*******************************/
 
 .logo
-  width: 13%
+  height: 5rem
   display: block
   margin: 0 auto
   margin-bottom: 2.4rem
+  @media screen and (max-height: $bp-font-min)
+    width: 10rem
+    margin-bottom: 0
   @media only screen and (max-width: $bp-sm)
     display: none
 
