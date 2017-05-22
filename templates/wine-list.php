@@ -1,4 +1,4 @@
-<article class="col-1 block">
+<article class="col-1 block scroll-pane">
     <h1>Wine list</h1>
 
     <section>
@@ -17,7 +17,7 @@
     </section>
 
     <section>
-        <h3 class="menu-item__offset">Vino bianco</h3>
+        <h3>Vino bianco</h3>
 
         <?foreach ($menuList['vino bianco'] as $item) :?>
             <div class="menu-item">

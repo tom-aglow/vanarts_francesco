@@ -4,16 +4,29 @@ return [
         'title' => 'Home | Francesco - Montreal Restaurant'
     ],
     'about' => [
-        'title' => 'About us | Francesco - Montreal Restaurant'
+        'title' => 'About us | Francesco - Montreal Restaurant',
+        'script' => [
+            "/js/jquery-ui.min.js",
+            "/js/jquery.mousewheel.js",
+            "/js/jquery.jscrollpane.js"
+        ]
     ],
     'menu' => [
         'title' => 'Menu | Francesco - Montreal Restaurant',
         'script' => [
+            "/js/jquery-ui.min.js",
+            "/js/jquery.mousewheel.js",
+            "/js/jquery.jscrollpane.js",
             "/js/menu.js"
         ]
     ],
     'wine-list' => [
-        'title' => 'Wine list | Francesco - Montreal Restaurant'
+        'title' => 'Wine list | Francesco - Montreal Restaurant',
+        'script' => [
+            "/js/jquery-ui.min.js",
+            "/js/jquery.mousewheel.js",
+            "/js/jquery.jscrollpane.js"
+        ]
     ],
     'gallery' => [
         'title' => 'Gallery | Francesco - Montreal Restaurant',

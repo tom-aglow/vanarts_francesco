@@ -71,8 +71,10 @@ function animateLayoutToState (state) {
     if (state == 'origin') {
         $copy.addClass("hide");
         setTimeout(function () {
-            $copy.removeClass("bring-to-front");
+            $copy.removeClass("bring-to-front-2");
             $box.removeClass("img-extend");
+            $box.toggleClass("pointer");
+            $box.toggleClass("bring-to-front-1");
             for (var i = 0; i < boxNamesList.length; i++) {
                 if (boxNamesList[i] + '-img' !== boxClicked) {
                     $('#' + boxNamesList[i] + '-img').removeClass("hide");
@@ -89,8 +91,10 @@ function animateLayoutToState (state) {
             }
         }
         $('#' + boxClicked + ' > h1').addClass("hide");
-        $copy.addClass("bring-to-front");
+        $copy.addClass("bring-to-front-2");
         $box.addClass("img-extend");
+        $box.toggleClass("pointer");
+        $box.toggleClass("bring-to-front-1");
         setTimeout(function () {
             $copy.removeClass("hide");
         }, 1000);

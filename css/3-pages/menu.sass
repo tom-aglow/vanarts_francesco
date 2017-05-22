@@ -51,6 +51,10 @@
       background-repeat: no-repeat
       background-attachment: fixed
 
+  .pointer
+    cursor: pointer
+
+
   /***    STYLES FOR TEXT CONTAINERS    ***/
 
   #salads-copy, #main-courses-copy, #desserts-copy, #salads-img, #main-courses-img, #desserts-img
@@ -61,21 +65,8 @@
       position: relative
       left: 0
 
-  #salads-copy
+  #salads-copy, #main-courses-copy
     left: calc(100% / 3 * 2)
-    @media only screen and (max-width: $bp-sm)
-      left: 0
-
-  #main-courses-copy
-    left: calc(100% / 3)
-    width: 100%
-    display: flex
-    flex-direction: row
-
-    & .col-1:last-child
-      & .menu-item:first-child
-        margin-top: 9.1rem
-
     @media only screen and (max-width: $bp-sm)
       left: 0
 
@@ -91,6 +82,8 @@
     background-color: $bg-shade
     position: absolute
     width: 100%
+    @media screen and (max-height: $bp-font-min)
+      padding: 1.75rem 0
     left: 0
     top: calc(50% - 5rem)
 
