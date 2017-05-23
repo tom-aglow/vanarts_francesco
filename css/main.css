@@ -452,17 +452,15 @@ ul, h1, h2, h3, p {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column; }
-  .col-1 section {
+  .col-1 section, .col-1 h1, .col-1 h2 {
     padding-left: 4.125rem;
     padding-right: 4.125rem; }
-    .col-1 section:last-of-type {
-      margin-bottom: 5rem; }
     @media screen and (max-height: 650px) {
-      .col-1 section {
+      .col-1 section, .col-1 h1, .col-1 h2 {
         padding-left: 1.5rem;
         padding-right: 1.5rem; } }
     @media only screen and (max-width: 480px) {
-      .col-1 section {
+      .col-1 section, .col-1 h1, .col-1 h2 {
         padding-left: 1.5rem;
         padding-right: 1.5rem; } }
   @media only screen and (max-width: 480px) {
@@ -809,7 +807,7 @@ h1::selection, h2::selection, h3::selection, p::selection, div::selection, span:
   font-size: 1.15rem; }
 
 .menu-item:not(:last-child) {
-  margin-bottom: 1rem; }
+  margin-bottom: 1.25rem; }
 
 .menu-dish-name, .menu-price {
   text-transform: uppercase;
@@ -857,13 +855,18 @@ input, textarea, select, option {
   margin-bottom: 1rem;
   font-size: 1.35rem;
   outline: none;
-  border: 1px solid black;
+  border: 1px solid #9B9B9B;
   -webkit-border-radius: 0;
           border-radius: 0; }
+  input:active, input:focus, textarea:active, textarea:focus, select:active, select:focus, option:active, option:focus {
+    border-color: #000000; }
 
 textarea {
   max-width: 100%;
   resize: none; }
+
+input[type=submit] {
+  cursor: pointer; }
 
 /***    RADIO BUTTONS    ***/
 input[type=radio] {
@@ -933,7 +936,7 @@ input[type=date] {
   float: left; }
 
 .jspTrack {
-  top: 20px;
+  top: 70px;
   background: #5E5E5E;
   position: relative;
   width: 1px; }
@@ -982,6 +985,15 @@ input[type=date] {
 /* Yuk! CSS Hack for IE6 3 pixel bug :( */
 * html .jspCorner {
   margin: 0 -3px 0 0; }
+
+.social-media-icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 2rem; }
+  @media screen and (max-height: 650px) {
+    .social-media-icon {
+      width: 1.75rem;
+      height: 1.75rem; } }
 
 /*******************************/
 /***          HEADER        ***/
@@ -1100,6 +1112,9 @@ input[type=date] {
 .home h1 {
   background-color: rgba(255, 255, 255, 0.9);
   text-align: center; }
+  @media screen and (max-height: 650px) {
+    .home h1 {
+      padding: 2rem 0; } }
 
 .home .home-article-details {
   background-color: rgba(255, 255, 255, 0.9);
@@ -1150,7 +1165,7 @@ input[type=date] {
       .about .block:first-of-type {
         margin-top: 100vh; } }
   .about h3:not(:first-of-type) {
-    margin-top: 1.25rem; }
+    margin-top: 2rem; }
   .about .michlen-stars {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1161,22 +1176,33 @@ input[type=date] {
     .about .michlen-stars object {
       width: 2rem;
       margin-right: 1.8rem; }
-  .about .reviews .forbes-logo, .about .reviews .mg-logo, .about .reviews .lxry-logo {
-    opacity: 0.8;
-    -webkit-filter: grayscale(1);
-            filter: grayscale(1);
-    margin-right: 1.8rem; }
-    @media only screen and (max-width: 480px) {
-      .about .reviews .forbes-logo, .about .reviews .mg-logo, .about .reviews .lxry-logo {
-        margin-right: 1.3rem; } }
-  .about .reviews .lxry-logo {
-    margin-right: 0; }
-  .about .reviews .forbes-logo, .about .reviews .lxry-logo {
-    max-width: 100px;
-    width: 6.25rem; }
-  .about .reviews .mg-logo {
-    max-width: 60px;
-    width: 3.75rem; }
+  .about .reviews {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-width: nowrap;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .about .reviews .forbes-logo, .about .reviews .mg-logo, .about .reviews .lxry-logo {
+      opacity: 0.8;
+      -webkit-filter: grayscale(1);
+              filter: grayscale(1);
+      margin-right: 1.8rem;
+      margin-bottom: 1.8rem; }
+      @media only screen and (max-width: 480px) {
+        .about .reviews .forbes-logo, .about .reviews .mg-logo, .about .reviews .lxry-logo {
+          margin-right: 1.3rem; } }
+    .about .reviews .lxry-logo {
+      margin-right: 0; }
+    .about .reviews .forbes-logo, .about .reviews .lxry-logo {
+      max-width: 100px;
+      width: 6.25rem; }
+    .about .reviews .mg-logo {
+      max-width: 60px;
+      width: 3.75rem; }
 
 /*******************************/
 /***     PAGE: WINE LIST     ***/
@@ -1195,9 +1221,11 @@ input[type=date] {
       background-attachment: fixed; }
       .wine-list .block:first-of-type {
         margin-top: 100vh; } }
+  .wine-list section:last-of-type {
+    margin-bottom: 4rem; }
   .wine-list > article:last-child {
     text-align: center; }
-    .wine-list > article:last-child h3, .wine-list > article:last-child .menu-item {
+    .wine-list > article:last-child h1, .wine-list > article:last-child h3, .wine-list > article:last-child .menu-item {
       text-align: left; }
     @media only screen and (max-width: 480px) {
       .wine-list > article:last-child h3 {
@@ -1297,6 +1325,8 @@ input[type=date] {
                 background-size: auto 100vh;
         background-repeat: no-repeat;
         background-attachment: fixed; } }
+  .menu .pointer {
+    cursor: pointer; }
   .menu #salads-copy, .menu #main-courses-copy, .menu #desserts-copy, .menu #salads-img, .menu #main-courses-img, .menu #desserts-img {
     position: absolute;
     height: 100%;
@@ -1305,29 +1335,11 @@ input[type=date] {
       .menu #salads-copy, .menu #main-courses-copy, .menu #desserts-copy, .menu #salads-img, .menu #main-courses-img, .menu #desserts-img {
         position: relative;
         left: 0; } }
-  .menu #salads-copy {
+  .menu #salads-copy, .menu #main-courses-copy {
     left: -webkit-calc(100% / 3 * 2);
     left: calc(100% / 3 * 2); }
     @media only screen and (max-width: 480px) {
-      .menu #salads-copy {
-        left: 0; } }
-  .menu #main-courses-copy {
-    left: -webkit-calc(100% / 3);
-    left: calc(100% / 3);
-    width: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row; }
-    .menu #main-courses-copy .col-1:last-child .menu-item:first-child {
-      margin-top: 9.1rem; }
-    @media only screen and (max-width: 480px) {
-      .menu #main-courses-copy {
+      .menu #salads-copy, .menu #main-courses-copy {
         left: 0; } }
   .menu #desserts-copy {
     left: 0; }
@@ -1342,6 +1354,9 @@ input[type=date] {
     left: 0;
     top: -webkit-calc(50% - 5rem);
     top: calc(50% - 5rem); }
+    @media screen and (max-height: 650px) {
+      .menu h1 {
+        padding: 1.75rem 0; } }
   .menu .controls-close {
     position: absolute;
     top: 0;
@@ -1433,6 +1448,9 @@ input[type=date] {
     .reservation .book-form #date {
       width: 40%;
       margin-right: 1rem; }
+      @media screen and (max-height: 650px) {
+        .reservation .book-form #date {
+          width: 50%; } }
       @media only screen and (max-width: 480px) {
         .reservation .book-form #date {
           width: 50%; } }
@@ -1442,8 +1460,14 @@ input[type=date] {
       width: 65%; }
     .reservation .book-form #guests + .ui-selectmenu-button.ui-button {
       width: 40%; }
+      @media screen and (max-height: 650px) {
+        .reservation .book-form #guests + .ui-selectmenu-button.ui-button {
+          width: 65%; } }
     .reservation .book-form #time + .ui-selectmenu-button.ui-button {
       width: 37%; }
+      @media screen and (max-height: 650px) {
+        .reservation .book-form #time + .ui-selectmenu-button.ui-button {
+          width: 45%; } }
       @media only screen and (max-width: 480px) {
         .reservation .book-form #time + .ui-selectmenu-button.ui-button {
           width: 45%; } }
@@ -1465,9 +1489,10 @@ input[type=date] {
 /*******************************/
 .hide {
   opacity: 0;
-  -webkit-transition: opacity 1s;
-  -o-transition: opacity 1s;
-  transition: opacity 1s; }
+  -webkit-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  pointer-events: none; }
 
 .hide-fast {
   opacity: 0;
@@ -1475,8 +1500,11 @@ input[type=date] {
   -o-transition: opacity 0.3s;
   transition: opacity 0.3s; }
 
-.bring-to-front {
+.bring-to-front-1 {
   z-index: 1; }
+
+.bring-to-front-2 {
+  z-index: 2; }
 
 .menu .img-extend {
   width: 100%;

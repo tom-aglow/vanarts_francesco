@@ -18,12 +18,11 @@
     <!-- favicon -->
     <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
 
-    <!--font awesome-->
-    <script src="https://use.fontawesome.com/4567abeb9b.js"></script>
     <!--jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 </head>
 <body>
+<?php include_once("img/elements/svg-defs.svg"); ?>
     <main class="page-container">
         <header class="page-header">
             <object type="image/svg+xml" data="/img/elements/logo.svg" class="logo"></object>
@@ -64,15 +63,15 @@
             </div>
             <div class="phone text-strong">(576) 341-4334</div>
             <div class="social-media">
-                <span class="fa-stack fa-1x">
-                    <a class="fa fa-facebook fa-stack-2x" href="http://facebook.com" target="_blank"></a>
-                </span>
-                <span class="fa-stack fa-1x">
-                    <a class="fa fa-youtube-play fa-stack-2x" href="http://youtube.com" target="_blank"></a>
-                </span>
-                <span class="fa-stack fa-1x">
-                    <a class="fa fa-instagram fa-stack-2x" href="http://instagram.com" target="_blank"></a>
-                </span>
+                <a href="http://facebook.com"><svg class="social-media-icon">
+                    <use xlink:href="#social-media-facebook-1" />
+                </svg></a>
+                <a href="http://youtube.com"><svg class="social-media-icon">
+                    <use xlink:href="#social-media-youtube-play" />
+                </svg></a>
+                <a href="http://instagram.com"><svg class="social-media-icon">
+                    <use xlink:href="#social-media-instagram" />
+                </svg></a>
             </div>
         </footer>
     </main>
