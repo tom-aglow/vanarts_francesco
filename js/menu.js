@@ -81,7 +81,7 @@ function animateLayoutToState (state) {
                 }
             }
             $('#' + boxClicked + ' > h1').removeClass("hide");
-        }, 1000);
+        }, 500);
 
     //showing menu list
     } else if (state == 'clicked') {
@@ -97,7 +97,7 @@ function animateLayoutToState (state) {
         $box.toggleClass("bring-to-front-1");
         setTimeout(function () {
             $copy.removeClass("hide");
-        }, 1000);
+        }, 500);
     }
 
 }

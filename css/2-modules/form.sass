@@ -11,15 +11,17 @@ input, textarea, select, option
   margin-bottom: 1rem
   font-size: 1.35rem
   outline: none
-  border: 1px solid black
+  border: 1px solid $text-color-light
   border-radius: 0
-
+  &:active, &:focus
+    border-color: $primary-color
 
 textarea
   max-width: 100%
   resize: none
 
-
+input[type=submit]
+  cursor: pointer
 
 /***    RADIO BUTTONS    ***/
 

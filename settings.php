@@ -41,6 +41,8 @@ return [
         'title' => 'Reserve a table | Francesco - Montreal Restaurant',
         'script' => [
             "/js/jquery-ui.min.js",
+            "/js/jquery.mousewheel.js",
+            "/js/jquery.jscrollpane.js",
             "/js/reservation.js"
         ],
         'styles' => [
