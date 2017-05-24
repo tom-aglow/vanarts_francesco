@@ -4,7 +4,7 @@
     </script>
     <script src="/js/map.js"></script>
 </div>
-<article class="col-1 block">
+<article class="col-1 block scroll-pane">
     <h1>Contacts</h1>
 
     <section>

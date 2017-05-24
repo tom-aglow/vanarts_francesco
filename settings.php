@@ -35,7 +35,12 @@ return [
         ]
     ],
     'contacts' => [
-        'title' => 'Contacts | Francesco - Montreal Restaurant'
+        'title' => 'Contacts | Francesco - Montreal Restaurant',
+        'script' => [
+            "/js/jquery-ui.min.js",
+            "/js/jquery.mousewheel.js",
+            "/js/jquery.jscrollpane.js"
+        ]
     ],
     'reservation' => [
         'title' => 'Reserve a table | Francesco - Montreal Restaurant',
@@ -54,5 +59,3 @@ return [
         'title' => 'Page not found | Francesco - Montreal Restaurant'
     ]
 ];
-
-//TODO think about page titles
