@@ -1,4 +1,5 @@
 <?php
+//settings for the site pages: title, additional css styles (besides main.css) and additional js-scripts (besides main.js and jQuery CDN)
 return [
     'home' => [
         'title' => 'Home | Francesco - Montreal Restaurant'

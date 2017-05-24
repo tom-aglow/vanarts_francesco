@@ -1,3 +1,4 @@
+<!--'chef' section-->
 <article class="chef col-1">
     <h1>Our chef</h1>
 
@@ -11,6 +12,7 @@
     </section>
 </article>
 
+<!--'signature dish' section-->
 <article class="sign-dish col-1">
     <h1>Signature dish</h1>
 
@@ -24,6 +26,7 @@
     </section>
 </article>
 
+<!--'private dinning' section-->
 <article class="dining col-1">
     <h1>Private dining</h1>
 

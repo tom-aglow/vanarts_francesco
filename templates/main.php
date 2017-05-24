@@ -3,6 +3,7 @@
 <head>
     <title><?=$pageTitle?></title>
 
+    <!--    meta tags-->
     <meta charset="UTF-8">
     <meta name="description" content="This is a student exercise website for the Vancouver Institute of Media Arts">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,8 +23,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 </head>
 <body>
+<!--include file with icons-->
 <?php include_once("img/elements/svg-defs.svg"); ?>
+
+<!--main page container-->
     <main class="page-container">
+
+<!--        page header-->
         <header class="page-header">
             <object type="image/svg+xml" data="/img/elements/logo.svg" class="logo"></object>
             <div class="mobile-nav-bg">
@@ -45,16 +51,24 @@
                 <a class="btn btn-primary btn-lg" href="/reservation">Reservation</a>
             </nav>
         </header>
+
+
+<!--        mobile navigation - hamburger menu-->
         <? if ($pageContentClass === 'home'):?>
         <div class="logo-mobile">
             <object type="image/svg+xml" data="../img/elements/logo.svg" class="logo-mobile-img"></object>
             <div class="arrow-down"></div>
         </div>
         <? endif;?>
+
+
+<!--        page content-->
         <section class="content <?=$pageContentClass ?>">
             <?=$pageContent ?>
         </section>
 
+
+<!--        page footer-->
         <footer class="page-footer">
             <div class="address">
                 <span class="text-strong">Francesco</span><br>
@@ -76,12 +90,14 @@
         </footer>
     </main>
 
+
     <!--page scripts-->
     <?if (count($pageScript) > 0):?>
         <? foreach ($pageScript as $path): ?>
             <script src="<?=$path?>"></script>
         <?endforeach; ?>
     <?endif;?>
+
 
     <!--main script-->
     <script src="/js/main.js"></script>

@@ -1,5 +1,7 @@
 function initMap() {
+    // declare and assign position of the marker
     var location = {lat: 49.2819226, lng: -123.1141043};
+    // declare displayed position
     var location_display;
 
     // define displayed position for desktop and mobile
@@ -9,14 +11,14 @@ function initMap() {
         location_display = {lat: 49.2819226, lng: -123.1221043};
     }
 
+    // initialising map
     var map = new google.maps.Map(document.getElementById('google-map'), {
         zoom: 15,
         center: location_display,
         scrollwheel: false,
         disableDefaultUI: true,
-        // navigationControl: false,
-        // mapTypeControl: false,
-        // scaleControl: false,
+
+        // assign custom styles to the map
         styles: [
             {
                 "elementType": "geometry",
@@ -276,6 +278,8 @@ function initMap() {
             }
         ]
     });
+
+    // add marker to the map
     var marker = new google.maps.Marker({
         position: location,
         map: map,

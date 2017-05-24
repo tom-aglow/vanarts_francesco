@@ -22,6 +22,8 @@
 <article id="main-courses-copy" class="col-1 block hide scroll-pane">
 
     <h2>Main courses</h2>
+
+<!--    pasta & rissoto-->
     <section>
         <h3>Pasta & Risotto</h3>
 
@@ -35,6 +37,8 @@
             </div>
         <?endforeach;?>
     </section>
+
+<!--    meat courses-->
     <section>
         <h3 class="menu-item__offset">Meat</h3>
 
@@ -48,6 +52,8 @@
             </div>
         <?endforeach;?>
     </section>
+
+<!--    fish courses-->
     <section>
         <h3 class="menu-item__offset">Fish</h3>
 
@@ -62,6 +68,8 @@
         <?endforeach;?>
 
     </section>
+
+<!--    control elements-->
     <img class="controls-close" src="/img/elements/btn-close.png" alt="icon close">
 
 </article>

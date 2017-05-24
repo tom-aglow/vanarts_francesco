@@ -1,11 +1,11 @@
-<div class="col-1 col-holder">
+<!--2 placeholders for pushing content section to the third column-->
+<div class="col-1 col-holder"></div>
+<div class="col-1 col-holder"></div>
 
-</div>
-<div class="col-1 col-holder">
-
-</div>
-
+<!--main content of the page-->
 <article class="col-1 col-holder block scroll-pane">
+
+<!--    'history' section-->
     <h1>Our history</h1>
     <section>
 
@@ -25,6 +25,8 @@
 
     </section>
 
+
+<!--    'current days' section-->
     <h2>Nowadays</h2>
 
     <section>

@@ -1,6 +1,7 @@
 <article class="col-1 block scroll-pane">
     <h1>Wine list</h1>
 
+<!--    'sparkling vine' section-->
     <section>
         <h3>VINO SPUMANTE</h3>
 
@@ -16,6 +17,7 @@
 
     </section>
 
+<!--    'white vine' section-->
     <section>
         <h3>Vino bianco</h3>
 
@@ -31,6 +33,7 @@
 
     </section>
 
+<!--    'red vine' section-->
     <section>
         <h3>Vino rosso</h3>
 
