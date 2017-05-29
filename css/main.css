@@ -470,7 +470,8 @@ ul, h1, h2, h3, p {
 
 .block {
   background-color: rgba(255, 255, 255, 0.9);
-  overflow: scroll; }
+  overflow: scroll;
+  outline: none; }
 
 .col-holder {
   display: -webkit-box;
@@ -504,7 +505,7 @@ html {
   font-size: calc(100vh / 3 * 4 / 100); }
   @media screen and (max-height: 650px) {
     html {
-      font-size: 75%; } }
+      font-size: 87.5%; } }
   @media screen and (max-width: 480px) {
     html {
       font-size: 100%; } }
@@ -543,11 +544,11 @@ p {
   text-transform: uppercase;
   font-weight: bold; }
 
-h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, p::-moz-selection, div::-moz-selection, span::-moz-selection, a::-moz-selection {
+*::-moz-selection {
   background-color: #000000;
   color: #FFFFFF; }
 
-h1::selection, h2::selection, h3::selection, p::selection, div::selection, span::selection, a::selection {
+*::selection {
   background-color: #000000;
   color: #FFFFFF; }
 
@@ -600,7 +601,7 @@ h1::selection, h2::selection, h3::selection, p::selection, div::selection, span:
   text-transform: uppercase; }
   @media screen and (max-height: 650px) {
     .nav-bar {
-      margin-top: 2rem; } }
+      margin-top: 0.5rem; } }
   @media only screen and (max-width: 480px) {
     .nav-bar {
       height: 100vh;
@@ -986,6 +987,9 @@ input[type=date] {
 * html .jspCorner {
   margin: 0 -3px 0 0; }
 
+/*******************************/
+/***         ICONS           ***/
+/*******************************/
 .social-media-icon {
   width: 2rem;
   height: 2rem;
@@ -1058,13 +1062,16 @@ input[type=date] {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 8.125rem; }
+  @media screen and (max-height: 650px) {
+    .page-footer {
+      padding: 0 5rem; } }
   .page-footer .address {
     padding-right: 4.7rem; }
   .page-footer .address, .page-footer .phone {
     font-size: 1.12rem; }
     @media screen and (max-height: 650px) {
       .page-footer .address, .page-footer .phone {
-        font-size: 12px; } }
+        font-size: 13px; } }
   .page-footer .social-media {
     -webkit-box-flex: 2;
     -webkit-flex-grow: 2;
@@ -1442,6 +1449,17 @@ input[type=date] {
       -webkit-align-items: center;
           -ms-flex-align: center;
               align-items: center; }
+      @media screen and (max-height: 650px) {
+        .reservation .book-form .row {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-align: start;
+          -webkit-align-items: flex-start;
+              -ms-flex-align: start;
+                  align-items: flex-start; } }
       .reservation .book-form .row label {
         font-size: 1.35rem; }
     .reservation .book-form .row:first-of-type {
@@ -1454,7 +1472,7 @@ input[type=date] {
       margin-right: 1rem; }
       @media screen and (max-height: 650px) {
         .reservation .book-form #date {
-          width: 50%; } }
+          width: 100%; } }
       @media only screen and (max-width: 480px) {
         .reservation .book-form #date {
           width: 50%; } }
@@ -1462,16 +1480,19 @@ input[type=date] {
       width: 30%; }
     .reservation .book-form #name, .reservation .book-form #email, .reservation .book-form #phone {
       width: 65%; }
+      @media screen and (max-height: 650px) {
+        .reservation .book-form #name, .reservation .book-form #email, .reservation .book-form #phone {
+          width: 100%; } }
     .reservation .book-form #guests + .ui-selectmenu-button.ui-button {
       width: 40%; }
       @media screen and (max-height: 650px) {
         .reservation .book-form #guests + .ui-selectmenu-button.ui-button {
-          width: 65%; } }
+          width: 100%; } }
     .reservation .book-form #time + .ui-selectmenu-button.ui-button {
       width: 37%; }
       @media screen and (max-height: 650px) {
         .reservation .book-form #time + .ui-selectmenu-button.ui-button {
-          width: 45%; } }
+          width: 100%; } }
       @media only screen and (max-width: 480px) {
         .reservation .book-form #time + .ui-selectmenu-button.ui-button {
           width: 45%; } }

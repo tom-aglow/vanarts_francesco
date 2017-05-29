@@ -21,6 +21,10 @@
       display: flex
       flex-direction: row
       align-items: center
+      @media screen and (max-height: $bp-font-min)
+        flex-direction: column
+        align-items: flex-start
+
       label
         font-size: 1.35rem
 
@@ -36,7 +40,7 @@
       width: 40%
       margin-right: 1rem
       @media screen and (max-height: $bp-font-min)
-        width: 50%
+        width: 100%
       @media only screen and (max-width: $bp-sm)
         width: 50%
 
@@ -46,11 +50,13 @@
 
     #name, #email, #phone
       width: 65%
+      @media screen and (max-height: $bp-font-min)
+        width: 100%
 
     #guests + .ui-selectmenu-button.ui-button
       width: 40%
       @media screen and (max-height: $bp-font-min)
-        width: 65%
+        width: 100%
 
 
 
@@ -58,7 +64,7 @@
     #time + .ui-selectmenu-button.ui-button
       width: 37%
       @media screen and (max-height: $bp-font-min)
-        width: 45%
+        width: 100%
       @media only screen and (max-width: $bp-sm)
         width: 45%
 

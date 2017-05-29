@@ -19,7 +19,7 @@
 html
   font-size: calc(100vh / 3 * 4 / 100)
   @media screen and (max-height: $bp-font-min)
-    font-size: 75%
+    font-size: 87.5%
   @media screen and (max-width: $bp-sm)
     font-size: 100%
 
@@ -56,6 +56,6 @@ p
   text-transform: uppercase
   font-weight: bold
 
-h1::selection, h2::selection, h3::selection, p::selection, div::selection, span::selection, a::selection
+*::selection
   background-color: $primary-color
   color: $selection-color
