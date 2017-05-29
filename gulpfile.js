@@ -4,6 +4,10 @@ var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 
+var clean = require('gulp-clean-css');
+var gcmq = require('gulp-group-css-media-queries');
+var uncss = require('gulp-uncss');              //delete unused css code
+
 var mode = "css";
 
 /**
@@ -27,8 +31,6 @@ gulp.task('browser-sync', ['sass'], function() {
             }
         });
     }
-
-
 });
 
 /**
@@ -68,6 +70,20 @@ gulp.task('watch', function() {
 });
 
 /**
- * Redefine default gulp tasl
+ * Redefine default gulp task
  */
 gulp.task('default', ['browser-sync', 'watch']);
+
+
+/**
+ * Clean css task
+ */
+gulp.task('clean', function () {
+    gulp.src('css/main.css')
+        .pipe(clean())
+        .pipe(gcmq())
+        // .pipe(uncss({
+        //     html: ['http://francesco.ohhhh.me']
+        // }))
+        .pipe(gulp.dest('css/min'));
+});
