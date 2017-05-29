@@ -1658,7 +1658,7 @@ html {
   font-size: calc(100vh / 3 * 4 / 100); }
   @media screen and (max-height: 650px) {
     html {
-      font-size: 75%; } }
+      font-size: 87.5%; } }
   @media screen and (max-width: 480px) {
     html {
       font-size: 100%; } }
@@ -1697,11 +1697,11 @@ p {
   text-transform: uppercase;
   font-weight: bold; }
 
-h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, p::-moz-selection, div::-moz-selection, span::-moz-selection, a::-moz-selection {
+*::-moz-selection {
   background-color: #000000;
   color: #FFFFFF; }
 
-h1::selection, h2::selection, h3::selection, p::selection, div::selection, span::selection, a::selection {
+*::selection {
   background-color: #000000;
   color: #FFFFFF; }
 

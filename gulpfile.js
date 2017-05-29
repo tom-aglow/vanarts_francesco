@@ -6,7 +6,6 @@ var prefix      = require('gulp-autoprefixer');
 
 var clean = require('gulp-clean-css');
 var gcmq = require('gulp-group-css-media-queries');
-var uncss = require('gulp-uncss');              //delete unused css code
 
 var mode = "css";
 
@@ -43,6 +42,7 @@ gulp.task('sass', function () {
             onError: browserSync.notify
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+        // .pipe(prefix(['> 0.01%'], { cascade: false }))
         .pipe(gulp.dest('css'))
         .pipe(browserSync.reload({stream:true}))
 });
@@ -80,10 +80,10 @@ gulp.task('default', ['browser-sync', 'watch']);
  */
 gulp.task('clean', function () {
     gulp.src('css/main.css')
-        .pipe(clean())
+        .pipe(clean({
+            level: 2,
+            compatibility: 'ie8'
+        }))
         .pipe(gcmq())
-        // .pipe(uncss({
-        //     html: ['http://francesco.ohhhh.me']
-        // }))
         .pipe(gulp.dest('css/min'));
 });
